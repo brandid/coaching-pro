@@ -114,7 +114,7 @@ function custom_edd_archive_loop() {
 					<?php
 					if ( edd_has_variable_prices( get_the_ID() ) ) {
 						echo 'Starting at: ';
-						dd_price( get_the_ID() );
+						edd_price( get_the_ID() );
 					} else {
 						edd_price( get_the_ID() );
 					}
