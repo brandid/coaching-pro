@@ -80,7 +80,7 @@
 	},
     "styles": {
         "color": {
-            "text": "#564f49"
+            "text": "var(--wp--preset--color--tangerine)"
         },
         "typography": {
             "fontSize": "30px",
@@ -88,15 +88,13 @@
         },
         "elements": {
             "h1": {
-                "color": {
-                    "text": "#334e41"
-                },
-                "typography": {
-                    "fontSize": "90px",
-                    "fontWeight": "700",
-                    "lineHeight": "95px"
-                }
-            }
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--source-serif-pro)",
+					"fontWeight": "300",
+					"lineHeight": "var(--wp--custom--typography--line-height--tiny)",
+					"fontSize": "var(--wp--custom--typography--font-size--colossal)"
+				}
+			}
         }
     }
 }
