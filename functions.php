@@ -7,6 +7,9 @@
  * @package Coaching Pro Theme
  */
 
+// todo: conditinoally load these based on options.
+require_once get_stylesheet_directory() . '/themes/default/init.php';
+
 // Start the engine.
 require_once get_template_directory() . '/lib/init.php';
 
