@@ -157,5 +157,5 @@ $appearance = array(
 		),
 	),
 );
-
-return $appearance;
+return array();
+//return $appearance;

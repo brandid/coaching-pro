@@ -9,7 +9,7 @@
  * Register settings and controls with the Customizer.
  */
 function coaching_pro_color_settings() {
-
+return;
 	global $wp_customize;
 
 	$appearance = genesis_get_config( 'appearance' );

@@ -2,7 +2,11 @@
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 2,
 	"settings": {
+        "appearanceTools": true,
 		"color": {
+            "defaultPalette": false,
+            "custom": true,
+            "link": true,
 			"palette": [
 				{"name": "Kale", "slug": "kale", "color": "#56585d"},
 				{"name": "Basil", "slug": "basil", "color": "#578157"},
@@ -15,6 +19,10 @@
 				{"name": "Black", "slug": "black", "color": "#000000"}
 			]
 		},
+        "layout": {
+            "contentSize": "780px",
+            "wideSize": "1280px"
+        },
         "custom": {
 			"spacing": {
 				"small": "max(1.25rem, 5vw)",
@@ -92,6 +100,7 @@
                     "text": "#334e41"
                 },
                 "typography": {
+                    "fontFamily": "var(--wp--preset--font-family--coaching-pro-heading-font)",
                     "fontSize": "90px",
                     "fontWeight": "700",
                     "lineHeight": "95px"
