@@ -21,6 +21,10 @@
  *
  */
 
+$coaching_pro_shared_content  = genesis_get_config( 'onboarding-shared' );
+$coaching_pro_nutrition_content  = genesis_get_config( 'onboarding-travel' );
+$navigation_layouts         = genesis_get_config( 'genesis-blocks-layouts' );
+
 return [
 	'dependencies'     => [
 		'plugins' => [
