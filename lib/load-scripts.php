@@ -154,3 +154,37 @@ function coaching_pro_responsive_menu_settings() {
 	);
 	return $settings;
 }
+
+/**
+ * Enqueue admin scripts on Genesis getting started screen.
+ *
+ * @param string $hook Current screen.
+ */
+function coaching_pro_add_skin_settings_js( string $hook ) {
+	if ( 'genesis_page_genesis-getting-started' !== $hook ) {
+		return;
+	}
+	wp_enqueue_script(
+		'coaching-pro-sweet-alert-js',
+		get_stylesheet_directory_uri() . '/js/sweetalert2/sweetalert2.all.min.js',
+		array(),
+		CHILD_THEME_VERSION,
+		true
+	);
+	wp_enqueue_script(
+		'coaching-pro-sweet-alert-skin-js',
+		get_stylesheet_directory_uri() . '/js/theme-skin-prompt.js',
+		array( 'wp-i18n' ),
+		CHILD_THEME_VERSION,
+		true
+	);
+	wp_enqueue_style(
+		'coaching-pro-sweet-alert-css',
+		get_stylesheet_directory_uri() . '/js/sweetalert2/sweetalert2.min.css',
+		array(),
+		CHILD_THEME_VERSION,
+		'all'
+	);
+	wp_add_inline_style( 'coaching-pro-sweet-alert-css', '.wp-core-ui .pack-actions button:not(.pack-prompt) { display: none; }' );
+}
+add_action( 'admin_enqueue_scripts', 'coaching_pro_add_skin_settings_js' );
