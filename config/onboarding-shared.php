@@ -21,8 +21,6 @@
  *
  */
 
-$navigation_layouts         = genesis_get_config( 'genesis-blocks-layouts' );
-
 return [
 	'dependencies'     => [
 		'plugins' => [
