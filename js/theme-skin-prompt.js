@@ -23,11 +23,28 @@
 			Swal.fire({
 				title: 'Import Styles and Content',
 				icon: 'question',
+				showCancelButton: true,
+  				confirmButtonText: 'Proceed with Installation',
+				showLoaderOnConfirm: true,
 				html: '<div style="text-align: left; display: flex; flex-wrap: wrap;"><p class="description" style="text-align: center;">When installing a new starter-pack/skin, it is highly recommended to overwrite the skin\'s previous settings.</p><label for="coaching-pro-customizer-option" style="display: block; width: 100%; margin-top: 15px;margin-bottom: 10px; font-size: 14px;"><input type="checkbox" id="coaching-pro-customizer-option" value="customizer_true" checked="checked" />Overwrite Customizer Settings (Recommended)</label><label style="display: block; width: 100%; font-size: 14px;" for="coaching-pro-posts-option"><input type="checkbox" id="coaching-pro-posts-option" value="posts_true" checked="checked" />Remove and Install Theme Content (Recommended)</label>',
 				preConfirm: function() {
-					var customizerCheckedValue = document.getElementById( '#coaching-pro-customizer-option' ).value;
-					var postsCheckedValue = document.getElementById( '#coaching-pro-posts-option' ).value;
-
+					var customizerCheckedValue = document.getElementById( 'coaching-pro-customizer-option' ).value;
+					var postsCheckedValue = document.getElementById( 'coaching-pro-posts-option' ).value;
+					document.querySelector( '.swal2-cancel' ).style.display = 'none';
+					Swal.showLoading();
+					return jQuery.ajax({
+						method: "POST",
+						url: ajaxurl,
+						data: { action: 'coaching_pro_save_import_settings', customizerOption: customizerCheckedValue, postsOption: postsCheckedValue }
+					  })
+					.done(function( response ) {
+						var clickedButton = e.target;
+						var clickedButtonWrapper = clickedButton.parentElement;
+						var genesisButton = clickedButtonWrapper.querySelector( '.genesis-install-pack' );
+						clickedButton.style.display = 'none';
+						genesisButton.style.display = 'block';
+						genesisButton.click();
+					});
 					console.log( customizerCheckedValue );
 					console.log( postsCheckedValue );
 				}

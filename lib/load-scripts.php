@@ -174,7 +174,7 @@ function coaching_pro_add_skin_settings_js( string $hook ) {
 	wp_enqueue_script(
 		'coaching-pro-sweet-alert-skin-js',
 		get_stylesheet_directory_uri() . '/js/theme-skin-prompt.js',
-		array( 'wp-i18n' ),
+		array( 'wp-i18n', 'jquery' ),
 		CHILD_THEME_VERSION,
 		true
 	);
@@ -189,3 +189,17 @@ function coaching_pro_add_skin_settings_js( string $hook ) {
 	wp_add_inline_style( 'coaching-pro-sweet-alert-css', '.swal2-html-container { overflow: hidden !important; }',  );
 }
 add_action( 'admin_enqueue_scripts', 'coaching_pro_add_skin_settings_js' );
+
+/**
+ * Ajax callback for saving pre-import settings in the installer.
+ */
+function coaching_pro_save_import_settings() {
+	$customizer_option = filter_input( INPUT_POST, 'customizerOption', FILTER_DEFAULT );
+	$content_override_option = filter_input( INPUT_POST, 'postsOption', FILTER_DEFAULT );
+
+	update_option( 'coaching_pro_skin_customizer_override', sanitize_text_field( $customizer_option ) );
+	update_option( 'coaching_pro_skin_content_override', sanitize_text_field( $content_override_option ) );
+
+	wp_send_json_success( array() );
+}
+add_action( 'wp_ajax_coaching_pro_save_import_settings', 'coaching_pro_save_import_settings' );
