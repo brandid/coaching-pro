@@ -164,6 +164,15 @@ function coaching_pro_add_skin_settings_js( string $hook ) {
 	if ( 'genesis_page_genesis-getting-started' !== $hook ) {
 		return;
 	}
+	/**
+	 * This section enqueue's a script on the Genesis getting started page.
+	 * The script clones the button, attaches its own event and popup (using SWAL) for options
+	 * to override customizer/pages. When completed, custom button is disabled, while original
+	 * button is shown and is clicked programmatically. Genesis hook genesis_onboarding_before_import_content
+	 * is run and reads in the options saved and performs customizer / post cleanup.
+	 * 
+	 * See Ajax callback below. See js/theme-skin-prompt.js. See config/theme-setup.php.
+	 */
 	wp_enqueue_script(
 		'coaching-pro-sweet-alert-js',
 		get_stylesheet_directory_uri() . '/js/sweetalert2/sweetalert2.all.min.js',
@@ -178,6 +187,8 @@ function coaching_pro_add_skin_settings_js( string $hook ) {
 		CHILD_THEME_VERSION,
 		true
 	);
+	$skin_ajax_nonce_value = wp_create_nonce( 'coaching-pro-ajax-skin-select' );
+	wp_add_inline_script( 'coaching-pro-sweet-alert-skin-js', 'var adminSkinNonce = "' . esc_js( $skin_ajax_nonce_value ) .'"', 'before' );
 	wp_enqueue_style(
 		'coaching-pro-sweet-alert-css',
 		get_stylesheet_directory_uri() . '/js/sweetalert2/sweetalert2.min.css',
@@ -194,11 +205,18 @@ add_action( 'admin_enqueue_scripts', 'coaching_pro_add_skin_settings_js' );
  * Ajax callback for saving pre-import settings in the installer.
  */
 function coaching_pro_save_import_settings() {
+	// todo: nonce
 	$customizer_option = filter_input( INPUT_POST, 'customizerOption', FILTER_DEFAULT );
 	$content_override_option = filter_input( INPUT_POST, 'postsOption', FILTER_DEFAULT );
+	$skin = filter_input( INPUT_POST, 'skin', FILTER_DEFAULT );
+	$nonce = filter_input( INPUT_POST, 'nonce', FILTER_DEFAULT );
+	if ( ! wp_verify_nonce( $nonce, 'coaching-pro-ajax-skin-select' ) || ! current_user_can( 'manage_options' ) ) {
+		wp_send_json_error( array() );
+	}
 
 	update_option( 'coaching_pro_skin_customizer_override', sanitize_text_field( $customizer_option ) );
 	update_option( 'coaching_pro_skin_content_override', sanitize_text_field( $content_override_option ) );
+	update_option( 'coaching_pro_skin_selected', sanitize_text_field( $skin ) );
 
 	wp_send_json_success( array() );
 }

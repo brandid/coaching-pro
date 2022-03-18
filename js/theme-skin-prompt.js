@@ -20,6 +20,8 @@
 
 		button.addEventListener( 'click', function( e ) {
 			e.preventDefault();
+			var selectedSkin = e.target.dataset.pack;
+
 			Swal.fire({
 				title: 'Import Styles and Content',
 				icon: 'question',
@@ -35,18 +37,26 @@
 					return jQuery.ajax({
 						method: "POST",
 						url: ajaxurl,
-						data: { action: 'coaching_pro_save_import_settings', customizerOption: customizerCheckedValue, postsOption: postsCheckedValue }
+						data: { action: 'coaching_pro_save_import_settings', customizerOption: customizerCheckedValue, postsOption: postsCheckedValue, skin: selectedSkin, nonce: adminSkinNonce }
 					  })
 					.done(function( response ) {
-						var clickedButton = e.target;
-						var clickedButtonWrapper = clickedButton.parentElement;
-						var genesisButton = clickedButtonWrapper.querySelector( '.genesis-install-pack' );
-						clickedButton.style.display = 'none';
-						genesisButton.style.display = 'block';
-						genesisButton.click();
+						if ( response.success ) {
+							var clickedButton = e.target;
+							var clickedButtonWrapper = clickedButton.parentElement;
+							var genesisButton = clickedButtonWrapper.querySelector( '.genesis-install-pack' );
+							clickedButton.style.display = 'none';
+							genesisButton.style.display = 'block';
+							genesisButton.click();
+						} else {
+							Swal.fire({
+								title: 'Something went wrong...',
+								icon: 'error',
+								text: 'The pre-install script could not run. This may be a permissions issue.',
+								confirmButtonText: 'Close',
+							});
+						}
+						
 					});
-					console.log( customizerCheckedValue );
-					console.log( postsCheckedValue );
 				}
 			  } )
 		} );
