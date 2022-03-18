@@ -186,5 +186,6 @@ function coaching_pro_add_skin_settings_js( string $hook ) {
 		'all'
 	);
 	wp_add_inline_style( 'coaching-pro-sweet-alert-css', '.wp-core-ui .pack-actions button:not(.pack-prompt) { display: none; }' );
+	wp_add_inline_style( 'coaching-pro-sweet-alert-css', '.swal2-html-container { overflow: hidden !important; }',  );
 }
 add_action( 'admin_enqueue_scripts', 'coaching_pro_add_skin_settings_js' );
