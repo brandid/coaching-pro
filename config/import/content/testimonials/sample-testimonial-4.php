@@ -11,4 +11,5 @@ return array(
 	'socialproofslider_testimonial_author_name'  => '<h3>Brenda M.</h3>',
 	'socialproofslider_testimonial_author_title' => '<p>Boston, MA</p>',
 	'socialproofslider_testimonial_text'         => '<h4>"... one of the best programs ..."</h4><p>This is one of the best programs I\'ve seen in years. I\'m already seeing huge returns.</p>',
+	'_generated_page'                            => '1',
 );
