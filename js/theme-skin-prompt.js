@@ -3,7 +3,7 @@
 	var starterPacksModalTrigger = document.querySelectorAll( '.pack-summary' );
 
 	function coachingProSkinPopup( element ) {
-		button.addEventListener( 'click', function( e ) {
+		element.addEventListener( 'click', function( e ) {
 			e.preventDefault();
 			var selectedSkin = e.target.dataset.pack;
 
@@ -20,9 +20,6 @@
 					
 					customizerCheckedValue = customizerChecked ? document.getElementById( 'coaching-pro-customizer-option' ).value : "false";
 					postsCheckedValue = postsChecked ? document.getElementById( 'coaching-pro-posts-option' ).value : "false";
-					console.log( customizerCheckedValue );
-					console.log( postsCheckedValue );
-					return;
 					document.querySelector( '.swal2-cancel' ).style.display = 'none';
 					Swal.showLoading();
 					return jQuery.ajax({
@@ -53,6 +50,9 @@
 		} );
 	}
 
+	/**
+	 * Add events to the modal as well.
+	 */
 	for ( var i = 0; i < starterPacksModalTrigger.length; i++ ) {
 		var modalTrigger = starterPacksModalTrigger[i].querySelector( '.js-modal' );
 		modalTrigger.addEventListener( 'click', function( e ) {
@@ -74,7 +74,7 @@
 
 			coachingProSkinPopup( button );
 
-			container.querySelector( '.pack-info-actions' ).append( button );
+			container.querySelector( '.pack-info-actions' ).prepend( button );
 		} );
 	}
 
