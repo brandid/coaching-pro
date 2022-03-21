@@ -12,7 +12,7 @@ function coachingpro_custom_edd_colors_css() {
 
 	wp_enqueue_style( genesis_get_theme_handle() . '-edd-custom-styles', get_stylesheet_directory_uri() . '/css/easydigitaldownloads.css', '', CHILD_THEME_VERSION );
 
-	$appearance = genesis_get_config( 'appearance' );
+	$appearance = coaching_pro_get_skin_appearance();
 
 	// Get EDD accent color.
 	$edd_accent_color = get_theme_mod( 'coachpro_theme_eddaccentcolor_setting', $appearance['default-colors']['color2'] );

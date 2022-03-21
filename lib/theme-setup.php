@@ -299,3 +299,14 @@ function coachingpro_stickynav_class( $attributes ) {
 	$attributes['class'] = ( ! $sticky_header ? $attributes['class'] : $attributes['class'] . ' sticky' );
 	return $attributes;
 }
+
+/**
+ * Retrieve current skin config.
+ *
+ * @param string $skin Current skin.
+ */
+function coaching_pro_get_skin_appearance() {
+	$config_appearance = get_option( 'coaching_pro_skin_selected', 'default' );
+	$appearance        = genesis_get_config( sprintf( 'skins/%s/appearance', $config_appearance ) );
+	return $appearance;
+}

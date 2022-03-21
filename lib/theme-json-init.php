@@ -47,4 +47,4 @@ function coaching_pro_condtional_json_init() {
 	// Only if you need a parent > child theme.json.
 	add_filter( 'template_directory', 'coaching_pro_modify_current_theme_path', 10, 1 );
 }
-add_action( 'after_setup_theme', 'coaching_pro_condtional_json_init', 10 );
+// add_action( 'after_setup_theme', 'coaching_pro_condtional_json_init', 10 );

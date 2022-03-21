@@ -70,7 +70,7 @@ function coaching_pro_font_settings() {
 
 	global $wp_customize;
 
-	$appearance = genesis_get_config( 'appearance' );
+	$appearance = coaching_pro_get_skin_appearance();
 
 	// Create an empty array to hold the list of fonts.
 	$choices = array();
@@ -285,7 +285,7 @@ add_action( 'customize_register', 'coaching_pro_font_settings' );
  */
 function coaching_pro_fonts_css() {
 
-	$appearance = genesis_get_config( 'appearance' );
+	$appearance = coaching_pro_get_skin_appearance();
 
 	$editor_fonts = $appearance['editor-fonts'];
 

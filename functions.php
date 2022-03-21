@@ -45,6 +45,10 @@ function coaching_pro_localization_setup() {
 // Load Theme Setup and Configuration.
 require_once CHILD_THEME_DIR . '/lib/theme-setup.php';
 
+// Load Theme Skin installer and cleanup.
+// Uses genesis_onboarding_before_import_content to clean up and save everything when a new skin is chosen.
+require_once CHILD_THEME_DIR . '/lib/skin-install.php';
+
 // Import custom separator control.
 require_once CHILD_THEME_DIR . '/lib/class-separator-control.php';
 

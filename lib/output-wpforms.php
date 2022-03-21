@@ -12,7 +12,7 @@ function coachingpro_custom_wpforms_colors_css() {
 
 	wp_enqueue_style( genesis_get_theme_handle() . '-wpforms-custom-styles', get_stylesheet_directory_uri() . '/css/wpforms.css', '', CHILD_THEME_VERSION );
 
-	$appearance = genesis_get_config( 'appearance' );
+	$appearance = coaching_pro_get_skin_appearance();
 
 	// Get Customizer colors.
 	$accent_color = get_theme_mod( 'coachpro_theme_color_2_setting', $appearance['default-colors']['color2'] );
