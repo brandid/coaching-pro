@@ -20,7 +20,7 @@ function coaching_pro_maybe_pre_cleanup() {
 
 	$appearance = genesis_get_config( sprintf( 'skins/%s/appearance', $selected_skin ) );
 	if ( 'true' === $customizer_override ) {
-		
+
 		// Set colors.
 		$color_palette = $appearance['editor-color-palette'];
 		$colors        = array();
@@ -50,10 +50,37 @@ function coaching_pro_maybe_pre_cleanup() {
 	}
 
 	if ( 'true' === $content_override ) {
+		// Try to remove generated content based on meta.
+		$post_query_args = array(
+			'post_type'      => array( 'post', 'page', 'socialproofslider' ),
+			'post_status'    => 'publish',
+			'posts_per_page' => 100,
+			'meta_query'     => array(
+				array(
+					'key'   => '_generated_page',
+					'value' => '1',
+				),
+			),
+		);
 
+		$items_to_remove = new WP_Query( $post_query_args );
+		$items_to_remove = $items_to_remove->get_posts();
+		foreach ( $items_to_remove as $item_to_remove ) {
+			$item_id = $item_to_remove->ID;
+			wp_delete_post( $item_id, true );
+		}
+
+		// Now let's try to delete by slug.
+		$config = genesis_get_config( 'onboarding-shared' );
+		$content = $config['content'] ?? array();
+		foreach ( $content as $content_item ) {
+			$slug = sanitize_title( $content_item['post_title'] );
+			$maybe_post = get_page_by_path( $slug, OBJECT, array( 'post', 'page', 'socialproofslider' ) );
+			if ( null !== $maybe_post ) {
+				wp_delete_post( $maybe_post->ID, true );
+			}
+		}
 	}
-
-	// Override customizer options with skin colors.
 }
 add_action( 'genesis_onboarding_before_import_content', 'coaching_pro_maybe_pre_cleanup' );
 
