@@ -2,33 +2,31 @@
 /**
  * Conditionally load the default theme.json file.
  *
+ * Assumes directory structure of /theme-name/skins/skin-name/theme.json (see switch statement below).
+ *
  * @package coaching-pro
  */
 
 /**
  * Override template directory if theme.json file is requested.
  *
+ * If skin isn't found, no theme.json file is loaded.
+ *
  * @param string $template_dir ABS Path to active template.
  */
 function coaching_pro_modify_current_theme_path( $template_dir ) {
 
-	$debug = debug_backtrace(); // Yes, but isn't all WordPress a hack at points?
+	$debug = debug_backtrace(); // Use debug backtrace to get caller.
 
+	/**
+	 * Todo: Update this function once WordPress supports conditional theme.json files. Should be in WP 6.0.
+	 */
 	$callback_class = $debug[4]['class'] ?? false;
 	$callback_function = $debug[4]['function'] ?? false;
 	if ( 'WP_Theme_JSON_Resolver' === $callback_class && 'get_file_path_from_theme' === $callback_function ) {
-		// $option_value = get_option( 'some_option' );
-		$option_value = 'default';
+		$active_skin = coaching_pro_get_active_skin_slug();
 
-		$theme_json_dir = false;
-		switch ( $option_value ) {
-			case 'default':
-				$theme_json_dir = '/skins/default';
-				break;
-			case 'red':
-				$theme_json_dir = '/skins/red';
-				break;
-		}
+		$theme_json_dir = '/config/skins/' . $active_skin;
 		if ( $theme_json_dir && file_exists( $template_dir . $theme_json_dir . '/theme.json' ) ) {
 			$template_dir .= $theme_json_dir;
 		}
@@ -47,4 +45,4 @@ function coaching_pro_condtional_json_init() {
 	// Only if you need a parent > child theme.json.
 	add_filter( 'template_directory', 'coaching_pro_modify_current_theme_path', 10, 1 );
 }
-// add_action( 'after_setup_theme', 'coaching_pro_condtional_json_init', 10 );
+add_action( 'after_setup_theme', 'coaching_pro_condtional_json_init', 10 );

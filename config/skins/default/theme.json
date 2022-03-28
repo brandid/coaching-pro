@@ -8,15 +8,19 @@
             "custom": true,
             "link": true,
 			"palette": [
-				{"name": "Kale", "slug": "kale", "color": "#56585d"},
-				{"name": "Basil", "slug": "basil", "color": "#578157"},
-				{"name": "Celery", "slug": "celery", "color": "#a3b18a"},
-				{"name": "Tangerine", "slug": "tangerine", "color": "#d46a43"},
-				{"name": "Cocoa", "slug": "cocoa", "color": "#827467"},
-				{"name": "Vanilla", "slug": "vanilla", "color": "#dad7cd"},
-				{"name": "Dark Chocolate", "slug": "dark-chocolate", "color": "#564f49"},
+				{"name": "Theme Color 1", "slug": "theme-color-1", "color": "#56585d"},
+				{"name": "Theme Color 2", "slug": "theme-color-2", "color": "#d46a43"},
+				{"name": "Theme Color 3", "slug": "theme-color-3", "color": "#6e6872"},
+				{"name": "Theme Color 4", "slug": "theme-color-4", "color": "#5c4a28"},
+				{"name": "Theme Color 5", "slug": "theme-color-5", "color": "#939393"},
+				{"name": "Theme Color 6", "slug": "theme-color-6", "color": "#8a8a8a"},
+				{"name": "Theme Color 7", "slug": "theme-color-7", "color": "#f0efee"},
+                {"name": "Theme Color 8", "slug": "theme-color-8", "color": "#f8f8f8"},
                 {"name": "White", "slug": "white", "color": "#FFFFFF"},
-				{"name": "Black", "slug": "black", "color": "#000000"}
+				{"name": "Black", "slug": "black", "color": "#000000"},
+                {"name": "Soft White", "slug": "soft-white", "color": "#f5f5f5"},
+                {"name": "Soft Black", "slug": "soft-black", "color": "#666666"},
+                {"name": "Grey", "slug": "grey", "color": "#a5abab"}
 			]
 		},
         "custom": {

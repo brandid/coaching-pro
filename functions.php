@@ -7,7 +7,10 @@
  * @package Coaching Pro Theme
  */
 
- // Theme.json helper. Must be run BEFORE genesis init.
+// Helper skin functions. Needs to be loaded before theme.json and skin setup.
+require_once get_stylesheet_directory() . '/lib/skins-setup.php';
+
+ // Theme.json helper. Conditionally load theme.json. Must be run BEFORE genesis init.
 require_once get_stylesheet_directory() . '/lib/theme-json-init.php';
 
 // Start the engine.

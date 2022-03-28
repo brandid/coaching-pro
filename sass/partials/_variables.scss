@@ -1,21 +1,21 @@
 // Colors
 //------------------------------------------------------------------------------
-$white: #fff;
-$black: #000;
-$soft-white: #f5f5f5;
-$soft-black: #666;
-$grey: #a5abab;
+$white: var( --wp--preset--color--white );
+$black: var( --wp--preset--color--black );
+$soft-white: var( --wp--preset--color--soft-white );
+$soft-black: var( --wp--preset--color--soft-black );
+$grey: var( --wp--preset--color--grey );
 
 // Theme Default Colors
 // -------------------------------------
-$theme-color1: #56585d;
-$theme-color2: #d46a43;
-$theme-color3: #6e6872;
-$theme-color4: #5c4a28;
-$theme-color5: #939393;
-$theme-color6: #8a8a8a;
-$theme-color7: #f0efee;
-$theme-color8: #f8f8f8;
+$theme-color1: var( --wp--preset--color--theme-color-1 );
+$theme-color2: var( --wp--preset--color--theme-color-2 );
+$theme-color3: var( --wp--preset--color--theme-color-3 );
+$theme-color4: var( --wp--preset--color--theme-color-4 );
+$theme-color5: var( --wp--preset--color--theme-color-5 );
+$theme-color6: var( --wp--preset--color--theme-color-6 );
+$theme-color7: var( --wp--preset--color--theme-color-7 );
+$theme-color8: var( --wp--preset--color--theme-color-8 );
 
 // Background colors
 //-------------------------------------
