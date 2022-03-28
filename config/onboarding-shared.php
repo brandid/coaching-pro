@@ -22,35 +22,7 @@
  */
 
 return array(
-	'dependencies'     => array(
-		'plugins' => array(
-			array(
-				'name'       => __( 'Easy Digital Downloads', 'coursemaker' ),
-				'slug'       => 'easy-digital-downloads/easy-digital-downloads.php',
-				'public_url' => 'https://wordpress.org/plugins/easy-digital-downloads/',
-			),
-			array(
-				'name'       => __( 'Genesis Blocks', 'coursemaker' ),
-				'slug'       => 'genesis-blocks/genesis-blocks.php',
-				'public_url' => 'https://wordpress.org/plugins/genesis-blocks/',
-			),
-			array(
-				'name'       => __( 'Social Proof (Testimonials) Slider', 'coursemaker' ),
-				'slug'       => 'social-proof-testimonials-slider/social-proof-slider.php',
-				'public_url' => 'https://wordpress.org/plugins/social-proof-testimonials-slider/',
-			),
-			array(
-				'name'       => __( 'WooCommerce', 'coursemaker' ),
-				'slug'       => 'woocommerce/woocommerce.php',
-				'public_url' => 'https://wordpress.org/plugins/woocommerce/',
-			),
-			array(
-				'name'       => __( 'WP Forms Lite', 'coursemaker' ),
-				'slug'       => 'wpforms-lite/wpforms.php',
-				'public_url' => 'https://wordpress.org/plugins/wpforms-lite/',
-			),
-		),
-	),
+	'dependencies'     => genesis_get_config( 'onboarding-shared-plugins' ),
 	'content'          => array(
 		'homepage'      => array(
 			'post_title'     => 'Home',
