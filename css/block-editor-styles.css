@@ -1,3 +1,4 @@
+/* Can not use CSS var() syntax here. It does not work at all */
 /* Coaching Pro - Block Editor Styles
 --------------------------------------------- */
 #wpwrap {

@@ -36,6 +36,7 @@ $global-border-radius: var( --wp--custom--global-border-radius );
 
 // Global Screen Sizes - was 1440px
 //------------------------------------------------------------------------------
+/* Can not use CSS var() syntax here. It does not work at all */
 $small1-screen: 320px;
 $small-screen-600: 600px;
 $small2-screen: 768px;

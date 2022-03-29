@@ -223,6 +223,7 @@ input[type="search"] {
 *::before {
   box-sizing: inherit; }
 
+/* Can not use CSS var() syntax here. It does not work at all */
 /* # Defaults
 ---------------------------------------------------------------------------------------------------- */
 .button,
