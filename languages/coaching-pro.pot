@@ -45,76 +45,20 @@ msgstr ""
 msgid "Sitemap"
 msgstr ""
 
-#: config/appearance.php:59, lib/color-functions.php:43
-msgid "Color 1"
+#: config/onboarding.php:29
+msgid "Default"
 msgstr ""
 
-#: config/appearance.php:64, lib/color-functions.php:67
-msgid "Color 2"
+#: config/onboarding.php:30
+msgid "Default theme style and appearance."
 msgstr ""
 
-#: config/appearance.php:69, lib/color-functions.php:91
-msgid "Color 3"
+#: config/onboarding.php:43
+msgid "Nutrition"
 msgstr ""
 
-#: config/appearance.php:74, lib/color-functions.php:115
-msgid "Color 4"
-msgstr ""
-
-#: config/appearance.php:79, lib/color-functions.php:139
-msgid "Text Color 1"
-msgstr ""
-
-#: config/appearance.php:84, lib/color-functions.php:163
-msgid "Text Color 2"
-msgstr ""
-
-#: config/appearance.php:89, lib/color-functions.php:187
-msgid "Background Color 1"
-msgstr ""
-
-#: config/appearance.php:94, lib/color-functions.php:211
-msgid "Background Color 2"
-msgstr ""
-
-#: config/appearance.php:99
-msgid "White"
-msgstr ""
-
-#: config/appearance.php:104
-msgid "Black"
-msgstr ""
-
-#: config/appearance.php:111, lib/font-functions.php:114
-msgid "H1"
-msgstr ""
-
-#: config/appearance.php:117, lib/font-functions.php:137
-msgid "H2"
-msgstr ""
-
-#: config/appearance.php:123, lib/font-functions.php:160
-msgid "H3"
-msgstr ""
-
-#: config/appearance.php:129, lib/font-functions.php:183
-msgid "H4"
-msgstr ""
-
-#: config/appearance.php:135, lib/font-functions.php:206
-msgid "H5"
-msgstr ""
-
-#: config/appearance.php:141, lib/font-functions.php:229
-msgid "H6"
-msgstr ""
-
-#: config/appearance.php:147, lib/font-functions.php:252
-msgid "Primary Nav Menu"
-msgstr ""
-
-#: config/appearance.php:153, lib/font-functions.php:275
-msgid "Body Text"
+#: config/onboarding.php:44
+msgid "Nutrition theme style and appearance."
 msgstr ""
 
 #: config/theme-supports.php:32
@@ -193,23 +137,55 @@ msgctxt "Block pattern description"
 msgid "A full-width section to promote newsletter signups or other content. Contains a background hero image, heading text, sub-heading text, supporting text, and a place to add your own opt-in form block."
 msgstr ""
 
-#: lib/color-functions.php:21
+#: lib/color-functions.php:20
 msgid "Color Palette"
 msgstr ""
 
-#: lib/color-functions.php:254
+#: lib/color-functions.php:42, config/skins/default/appearance.php:59, config/skins/nutrition/appearance.php:59
+msgid "Color 1"
+msgstr ""
+
+#: lib/color-functions.php:66, config/skins/default/appearance.php:64, config/skins/nutrition/appearance.php:64
+msgid "Color 2"
+msgstr ""
+
+#: lib/color-functions.php:90, config/skins/default/appearance.php:69, config/skins/nutrition/appearance.php:69
+msgid "Color 3"
+msgstr ""
+
+#: lib/color-functions.php:114, config/skins/default/appearance.php:74, config/skins/nutrition/appearance.php:74
+msgid "Color 4"
+msgstr ""
+
+#: lib/color-functions.php:138, config/skins/default/appearance.php:79, config/skins/nutrition/appearance.php:79
+msgid "Text Color 1"
+msgstr ""
+
+#: lib/color-functions.php:162, config/skins/default/appearance.php:84, config/skins/nutrition/appearance.php:84
+msgid "Text Color 2"
+msgstr ""
+
+#: lib/color-functions.php:186, config/skins/default/appearance.php:89, config/skins/nutrition/appearance.php:89
+msgid "Background Color 1"
+msgstr ""
+
+#: lib/color-functions.php:210, config/skins/default/appearance.php:94, config/skins/nutrition/appearance.php:94
+msgid "Background Color 2"
+msgstr ""
+
+#: lib/color-functions.php:253
 msgid "Links Color"
 msgstr ""
 
-#: lib/color-functions.php:278
+#: lib/color-functions.php:277
 msgid "Mobile Menu Button Color"
 msgstr ""
 
-#: lib/color-functions.php:322
+#: lib/color-functions.php:321
 msgid "WooCommerce Accent Color"
 msgstr ""
 
-#: lib/color-functions.php:368
+#: lib/color-functions.php:367
 msgid "Easy Digital Downloads Accent Color"
 msgstr ""
 
@@ -241,6 +217,38 @@ msgstr ""
 msgid "Fonts"
 msgstr ""
 
+#: lib/font-functions.php:114, config/skins/default/appearance.php:111, config/skins/nutrition/appearance.php:111
+msgid "H1"
+msgstr ""
+
+#: lib/font-functions.php:137, config/skins/default/appearance.php:117, config/skins/nutrition/appearance.php:117
+msgid "H2"
+msgstr ""
+
+#: lib/font-functions.php:160, config/skins/default/appearance.php:123, config/skins/nutrition/appearance.php:123
+msgid "H3"
+msgstr ""
+
+#: lib/font-functions.php:183, config/skins/default/appearance.php:129, config/skins/nutrition/appearance.php:129
+msgid "H4"
+msgstr ""
+
+#: lib/font-functions.php:206, config/skins/default/appearance.php:135, config/skins/nutrition/appearance.php:135
+msgid "H5"
+msgstr ""
+
+#: lib/font-functions.php:229, config/skins/default/appearance.php:141, config/skins/nutrition/appearance.php:141
+msgid "H6"
+msgstr ""
+
+#: lib/font-functions.php:252, config/skins/default/appearance.php:147, config/skins/nutrition/appearance.php:147
+msgid "Primary Nav Menu"
+msgstr ""
+
+#: lib/font-functions.php:275, config/skins/default/appearance.php:153, config/skins/nutrition/appearance.php:153
+msgid "Body Text"
+msgstr ""
+
 #: lib/load-scripts.php:143
 msgid "Menu"
 msgstr ""
@@ -259,4 +267,12 @@ msgstr ""
 
 #: lib/theme-setup.php:186, lib/theme-setup.php:213
 msgid "about"
+msgstr ""
+
+#: config/skins/default/appearance.php:99, config/skins/nutrition/appearance.php:99
+msgid "White"
+msgstr ""
+
+#: config/skins/default/appearance.php:104, config/skins/nutrition/appearance.php:104
+msgid "Black"
 msgstr ""

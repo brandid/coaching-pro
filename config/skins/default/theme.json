@@ -24,24 +24,33 @@
 			]
 		},
 		"custom": {
+			"maxWidth": "1280px",
+			"globalBorderRadius": "4px",
+			"screens": {
+				"small": "320px",
+				"small-2": "600px",
+				"small-3": "768px",
+				"medium": "1024px",
+				"large": "1280px",
+				"xl": "1341px",
+				"xxl": "1600px"
+			},
+			"typography": {
+				"fontSize": {
+					"body": "clamp( 14px, calc(1vw + 1rem), 17px )",
+					"h1": "clamp( 36px, calc(3.5vw + 1rem), 60px )",
+					"h2": "clamp( 24px, calc(2.8vw + 1rem), 48px )",
+					"h3": "clamp( 20px, calc(2vw + 1rem), 38px )",
+					"h4": "clamp( 18px, calc(1.75vw + 1rem), 30px )",
+					"h5": "clamp( 17px, calc(1.25vw + 1rem), 24px )",
+					"h6": "clamp( 16px, calc(1vw + 1rem), 20px )"
+				}
+			},
 			"spacing": {
 				"small": "max(1.25rem, 5vw)",
 				"medium": "clamp(2rem, 8vw, calc(4 * var(--wp--style--block-gap)))",
 				"large": "clamp(4rem, 10vw, 8rem)",
 				"outer": "var(--wp--custom--spacing--small, 1.25rem)"
-			},
-			"typography": {
-				"font-size": {
-					"huge": "clamp(2.25rem, 4vw, 2.75rem)",
-					"gigantic": "clamp(2.75rem, 6vw, 3.25rem)",
-					"colossal": "clamp(3.25rem, 8vw, 6.25rem)"
-				},
-				"line-height": {
-					"tiny": 1.15,
-					"small": 1.2,
-					"medium": 1.4,
-					"normal": 1.6
-				}
 			}
 		},
 		"typography": {
