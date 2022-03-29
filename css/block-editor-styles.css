@@ -59,24 +59,24 @@
   padding: 0; }
 
 .editor-styles-wrapper h1 {
-  font-size: var(--wp--custom--typography--font-size--h1);
+  font-size: var(--wp--custom--typography--font-size--h-1);
   line-height: 1.25; }
 
 .editor-styles-wrapper h2 {
-  font-size: var(--wp--custom--typography--font-size--h2);
+  font-size: var(--wp--custom--typography--font-size--h-2);
   line-height: 1.25; }
 
 .editor-styles-wrapper h3 {
-  font-size: var(--wp--custom--typography--font-size--h3); }
+  font-size: var(--wp--custom--typography--font-size--h-3); }
 
 .editor-styles-wrapper h4 {
-  font-size: var(--wp--custom--typography--font-size--h4); }
+  font-size: var(--wp--custom--typography--font-size--h-4); }
 
 .editor-styles-wrapper h5 {
-  font-size: var(--wp--custom--typography--font-size--h5); }
+  font-size: var(--wp--custom--typography--font-size--h-5); }
 
 .editor-styles-wrapper h6 {
-  font-size: var(--wp--custom--typography--font-size--h6); }
+  font-size: var(--wp--custom--typography--font-size--h-6); }
 
 .editor-styles-wrapper b,
 .editor-styles-wrapper strong {
@@ -86,7 +86,7 @@
   font-family: monospace; }
 
 .editor-post-title__block .editor-post-title__input {
-  font-size: var(--wp--custom--typography--font-size--h1);
+  font-size: var(--wp--custom--typography--font-size--h-1);
   line-height: 1.25;
   margin: 0 0 20px; }
 

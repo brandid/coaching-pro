@@ -69,11 +69,11 @@ html {
   display: grid;
   grid-template-columns: repeat(auto-fill, 100%);
   justify-content: space-between; }
-  @media screen and (min-width: var(--wp--custom--screens--medium)) {
+  @media screen and (min-width: 1024px) {
     .edd-page.edd-archive #genesis-content article.entry .edd-products-wrap {
       grid-template-columns: repeat(auto-fill, 48%);
       grid-gap: 2%; } }
-  @media screen and (min-width: var(--wp--custom--screens--large)) {
+  @media screen and (min-width: 1280px) {
     .edd-page.edd-archive #genesis-content article.entry .edd-products-wrap {
       grid-template-columns: repeat(auto-fill, 31%);
       margin-left: -210px;
@@ -110,7 +110,7 @@ html {
 .full-width-content.edd-page #genesis-content > .entry > .entry-content {
   margin-left: 0;
   margin-right: 0; }
-  @media screen and (min-width: var(--wp--custom--screens--large)) {
+  @media screen and (min-width: 1280px) {
     .full-width-content.edd-page #genesis-content > .entry > .entry-content {
       margin-left: -250px;
       margin-right: -250px;
@@ -121,20 +121,20 @@ html {
 --------------------------------------- */
 .edd-checkout #edd_checkout_cart_form #edd_checkout_cart thead {
   display: none; }
-  @media screen and (min-width: var(--wp--custom--screens--large)) {
+  @media screen and (min-width: 1280px) {
     .edd-checkout #edd_checkout_cart_form #edd_checkout_cart thead {
       display: table-header-group; } }
 
 .edd-checkout #edd_checkout_cart_form #edd_checkout_cart tbody tr {
   display: block;
   margin-bottom: 20px; }
-  @media screen and (min-width: var(--wp--custom--screens--large)) {
+  @media screen and (min-width: 1280px) {
     .edd-checkout #edd_checkout_cart_form #edd_checkout_cart tbody tr {
       display: table-row;
       margin-bottom: 0; } }
   .edd-checkout #edd_checkout_cart_form #edd_checkout_cart tbody tr:nth-child(even) {
     background-color: rgba(0, 0, 0, 0.025); }
-    @media screen and (min-width: var(--wp--custom--screens--large)) {
+    @media screen and (min-width: 1280px) {
       .edd-checkout #edd_checkout_cart_form #edd_checkout_cart tbody tr:nth-child(even) {
         background-color: transparent; } }
   .edd-checkout #edd_checkout_cart_form #edd_checkout_cart tbody tr td {
@@ -142,7 +142,7 @@ html {
     width: 100%;
     background-color: transparent;
     border: 0; }
-    @media screen and (min-width: var(--wp--custom--screens--large)) {
+    @media screen and (min-width: 1280px) {
       .edd-checkout #edd_checkout_cart_form #edd_checkout_cart tbody tr td {
         display: table-cell;
         width: auto;
@@ -150,7 +150,7 @@ html {
         border: 1px solid #eee; } }
     .edd-checkout #edd_checkout_cart_form #edd_checkout_cart tbody tr td.edd_cart_item_price {
       text-align: right; }
-      @media screen and (min-width: var(--wp--custom--screens--large)) {
+      @media screen and (min-width: 1280px) {
         .edd-checkout #edd_checkout_cart_form #edd_checkout_cart tbody tr td.edd_cart_item_price {
           text-align: left; } }
 

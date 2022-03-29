@@ -43,32 +43,35 @@
 					"h3": "clamp( 20px, calc(2vw + 1rem), 38px )",
 					"h4": "clamp( 18px, calc(1.75vw + 1rem), 30px )",
 					"h5": "clamp( 17px, calc(1.25vw + 1rem), 24px )",
-					"h6": "clamp( 16px, calc(1vw + 1rem), 20px )"
+					"h6": "clamp( 16px, calc(1vw + 1rem), 20px )",
+					"html": "62.5%"
+				},
+				"fontWeight": {
+					"body": "300",
+					"heading": "300"
+				},
+				"lineHeight": {
+					"body": "1.6",
+					"heading": "1.5"
 				}
-			},
-			"spacing": {
-				"small": "max(1.25rem, 5vw)",
-				"medium": "clamp(2rem, 8vw, calc(4 * var(--wp--style--block-gap)))",
-				"large": "clamp(4rem, 10vw, 8rem)",
-				"outer": "var(--wp--custom--spacing--small, 1.25rem)"
 			}
 		},
 		"typography": {
 			"fontFamilies": [
 				{
-					"fontFamily": "Playfair Display, sans-serif",
+					"fontFamily": "Montserrat, sans-serif",
 					"slug": "coaching-pro-heading-font",
-					"name": "Playfair Display"
+					"name": "Montserrat"
 				},
 				{
-					"fontFamily": "Shadows Into Light, cursive, sans-serif",
+					"fontFamily": "Caveat, cursive, sans-serif",
 					"slug": "coaching-pro-sub-heading-font",
-					"name": "Shadows Into Light"
+					"name": "Caveat"
 				},
 				{
-					"fontFamily": "Raleway, sans-serif",
+					"fontFamily": "Montserrat, sans-serif",
 					"slug": "coaching-pro-body-font",
-					"name": "Raleway"
+					"name": "Montserrat"
 				}
 			],
 			"fontSizes": [
@@ -117,24 +120,11 @@
 	},
 	"styles": {
 		"color": {
-			"text": "#564f49"
+			"text": "#8A8A8A"
 		},
 		"typography": {
 			"fontSize": "30px",
 			"lineHeight": "55px"
-		},
-		"elements": {
-			"h1": {
-				"color": {
-					"text": "#334e41"
-				},
-				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--coaching-pro-heading-font)",
-					"fontSize": "90px",
-					"fontWeight": "700",
-					"lineHeight": "95px"
-				}
-			}
 		}
 	}
 }

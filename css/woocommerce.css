@@ -13,7 +13,7 @@ html {
 .woocommerce-checkout #genesis-content .woocommerce,
 .woocommerce-account #genesis-content .woocommerce {
   max-width: 100%; }
-  @media screen and (min-width: var(--wp--custom--screens--large)) {
+  @media screen and (min-width: 1280px) {
     .woocommerce-shop #genesis-content .woocommerce,
     .woocommerce-cart #genesis-content .woocommerce,
     .woocommerce-checkout #genesis-content .woocommerce,
@@ -181,7 +181,7 @@ html {
       flex: 1;
       margin-right: 20px;
       margin-bottom: 30px; }
-      @media screen and (min-width: var(--wp--custom--screens--medium)) {
+      @media screen and (min-width: 1024px) {
         .single-product #genesis-content .woocommerce .single-product .product .related.products ul.products li.product {
           min-width: 31%;
           max-width: 48%; } }
@@ -222,15 +222,15 @@ html {
      -moz-column-count: 1;
           column-count: 1;
   border-radius: var(--wp--custom--global-border-radius); }
-  @media screen and (min-width: var(--wp--custom--screens--small-2)) {
+  @media screen and (min-width: 600px) {
     .woocommerce-account #genesis-content .woocommerce nav.woocommerce-MyAccount-navigation {
       -webkit-column-count: 2;
          -moz-column-count: 2;
               column-count: 2; } }
-  @media screen and (min-width: var(--wp--custom--screens--medium)) {
+  @media screen and (min-width: 1024px) {
     .woocommerce-account #genesis-content .woocommerce nav.woocommerce-MyAccount-navigation {
       padding: 20px; } }
-  @media screen and (min-width: var(--wp--custom--screens--large)) {
+  @media screen and (min-width: 1280px) {
     .woocommerce-account #genesis-content .woocommerce nav.woocommerce-MyAccount-navigation {
       width: auto;
       padding: 30px;
@@ -284,7 +284,7 @@ html {
 
 .woocommerce-account #genesis-content .woocommerce .woocommerce-MyAccount-content {
   width: 100%; }
-  @media screen and (min-width: var(--wp--custom--screens--large)) {
+  @media screen and (min-width: 1280px) {
     .woocommerce-account #genesis-content .woocommerce .woocommerce-MyAccount-content {
       width: 78%; } }
   .woocommerce-account #genesis-content .woocommerce .woocommerce-MyAccount-content form.edit-account button[type="submit"] {

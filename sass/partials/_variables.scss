@@ -36,15 +36,15 @@ $global-border-radius: var( --wp--custom--global-border-radius );
 
 // Global Screen Sizes - was 1440px
 //------------------------------------------------------------------------------
-$small1-screen: var( --wp--custom--screens--small );
-$small-screen-600: var( --wp--custom--screens--small-2 );
-$small2-screen: var( --wp--custom--screens--small-3 );
-$medium-screen: var( --wp--custom--screens--medium );
-$large-screen: var( --wp--custom--screens--large );
-$xl-screen: var( --wp--custom--screens--xl );
-$xxl-screen: var( --wp--custom--screens--xxl );
+$small1-screen: 320px;
+$small-screen-600: 600px;
+$small2-screen: 768px;
+$medium-screen: 1024px;
+$large-screen: 1280px;
+$xl-screen: 1341px;
+$xxl-screen: 1600px;
 
-$max-width: var( --wp--custom--max-width );
+$max-width: 1280px;
 
 // Global Breakpoints
 //------------------------------------------------------------------------------
@@ -83,9 +83,9 @@ $heading-font-weight: var( --wp--custom--typography--font-weight--heading );
 // Fluid Typography - responsive font sizes
 //------------------------------------------------------------------------------
 $body-font-size: var( --wp--custom--typography--font-size--body );
-$h1-font-size: var( --wp--custom--typography--font-size--h1 );
-$h2-font-size: var( --wp--custom--typography--font-size--h2 );
-$h3-font-size: var( --wp--custom--typography--font-size--h3 );
-$h4-font-size: var( --wp--custom--typography--font-size--h4 );
-$h5-font-size: var( --wp--custom--typography--font-size--h5 );
-$h6-font-size: var( --wp--custom--typography--font-size--h6 );
+$h1-font-size: var( --wp--custom--typography--font-size--h-1 );
+$h2-font-size: var( --wp--custom--typography--font-size--h-2 );
+$h3-font-size: var( --wp--custom--typography--font-size--h-3 );
+$h4-font-size: var( --wp--custom--typography--font-size--h-4 );
+$h5-font-size: var( --wp--custom--typography--font-size--h-5 );
+$h6-font-size: var( --wp--custom--typography--font-size--h-6 );
