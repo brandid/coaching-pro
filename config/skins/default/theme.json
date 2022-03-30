@@ -23,6 +23,10 @@
 				{"name": "Grey", "slug": "grey", "color": "#a5abab"}
 			]
 		},
+		"layout": {
+			"contentSize": "690px",
+			"wideSize": "940px"
+		},
 		"custom": {
 			"maxWidth": "1280px",
 			"globalBorderRadius": "4px",
@@ -51,7 +55,7 @@
 					"heading": "300"
 				},
 				"lineHeight": {
-					"body": "1.6",
+					"body": "1.2",
 					"heading": "1.5"
 				}
 			}
@@ -120,18 +124,36 @@
 			]
 		},
 		"spacing": {
-			"customMargin": true,
-			"customPadding": true,
+			"margin": true,
+			"padding": true,
 			"units": [ "px", "em", "rem", "vh", "vw" ]
 		}
 	},
 	"styles": {
+		"elements": {
+			"link": {
+				"color": {
+					"text": "D46A43"
+				}
+			}
+		},
+		"border": {
+			"radius": "4px"
+		},
 		"color": {
 			"text": "#8A8A8A"
 		},
 		"typography": {
-			"fontSize": "30px",
-			"lineHeight": "55px"
+			"fontSize": "22.5px",
+			"lineHeight": "40px",
+			"fontWeight": "300"
+		},
+		"blocks":{
+			"core/paragraph": {
+				"color": {
+					"text": "#8A8A8A"
+				}
+			}
 		}
 	}
 }

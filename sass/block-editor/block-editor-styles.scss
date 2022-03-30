@@ -34,10 +34,10 @@ body {
 /* Regular content width.
 /* 660px + 30px to match paragraph width on front-end and editor.
 --------------------------------------------- */
-.wp-block,
-.wp-block-group__inner-container {
-	max-width: 690px;
-}
+// .wp-block,
+// .wp-block-group__inner-container {
+// 	max-width: 690px;
+// }
 
 /* Width of "wide" blocks
 /* 1062px + 30px so wide images match width in front-end and editor.
