@@ -24,11 +24,14 @@ function coaching_pro_modify_current_theme_path( $template_dir ) {
 	$callback_class = $debug[4]['class'] ?? false;
 	$callback_function = $debug[4]['function'] ?? false;
 	if ( 'WP_Theme_JSON_Resolver' === $callback_class && 'get_file_path_from_theme' === $callback_function ) {
+		remove_filter( 'stylesheet_directory', 'coaching_pro_modify_current_theme_path', 10, 1 );
+		$stylesheet_directory = get_stylesheet_directory();
+		add_filter( 'stylesheet_directory', 'coaching_pro_modify_current_theme_path', 10, 1 );
 		$active_skin = coaching_pro_get_active_skin_slug();
 
 		$theme_json_dir = '/config/skins/' . $active_skin;
-		if ( $theme_json_dir && file_exists( $template_dir . $theme_json_dir . '/theme.json' ) ) {
-			$template_dir .= $theme_json_dir;
+		if ( $theme_json_dir && file_exists( $stylesheet_directory . $theme_json_dir . '/theme.json' ) ) {
+			$template_dir = $stylesheet_directory . $theme_json_dir;
 		}
 	}
 	return $template_dir;
@@ -44,5 +47,7 @@ function coaching_pro_condtional_json_init() {
 
 	// Only if you need a parent > child theme.json.
 	add_filter( 'template_directory', 'coaching_pro_modify_current_theme_path', 10, 1 );
+
+	WP_Theme_JSON_Resolver::clean_cached_data();
 }
 add_action( 'after_setup_theme', 'coaching_pro_condtional_json_init', 10 );

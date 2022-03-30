@@ -57,6 +57,8 @@
 			}
 		},
 		"typography": {
+			"customFontSize": true,
+			"customLineHeight": true,
 			"fontFamilies": [
 				{
 					"fontFamily": "Montserrat, sans-serif",
@@ -78,44 +80,49 @@
 				{
 					"slug": "x-small",
 					"size": "10px",
-					"name": "Extra Small: "
+					"name": "Extra Small:  "
 				},
 				{
 					"slug": "small",
-					"size": "12",
-					"name": "Small: "
+					"size": "12px",
+					"name": "Small:  "
 				},
 				{
 					"slug": "medium",
-					"size": "16",
-					"name": "Medium: "
+					"size": "16px",
+					"name": "Medium:  "
 				},
 				{
 					"slug": "large",
-					"size": "22",
-					"name": "Large: "
+					"size": "22px",
+					"name": "Large:  "
 				},
 				{
 					"slug": "super",
-					"size": "32",
-					"name": "Super: "
+					"size": "32px",
+					"name": "Super:  "
 				},
 				{
 					"slug": "heading-1",
-					"size": "90",
-					"name": "Heading 1: "
+					"size": "90px",
+					"name": "Heading 1:  "
 				},
 				{
 					"slug": "heading-2",
-					"size": "70",
-					"name": "Heading 2: "
+					"size": "70px",
+					"name": "Heading 2:  "
 				},
 				{
 					"slug": "sub-heading",
-					"size": "36",
-					"name": "Sub-heading: "
+					"size": "36px",
+					"name": "Sub-heading:  "
 				}
 			]
+		},
+		"spacing": {
+			"customMargin": true,
+			"customPadding": true,
+			"units": [ "px", "em", "rem", "vh", "vw" ]
 		}
 	},
 	"styles": {
