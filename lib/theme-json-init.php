@@ -2,7 +2,7 @@
 /**
  * Conditionally load the default theme.json file.
  *
- * Assumes directory structure of /theme-name/skins/skin-name/theme.json (see switch statement below).
+ * Assumes directory structure of /theme-name/skins/skin-name/theme.json.
  *
  * @package coaching-pro
  */
@@ -27,7 +27,7 @@ function coaching_pro_modify_current_theme_path( $template_dir ) {
 		remove_filter( 'stylesheet_directory', 'coaching_pro_modify_current_theme_path', 10, 1 );
 		$stylesheet_directory = get_stylesheet_directory();
 		add_filter( 'stylesheet_directory', 'coaching_pro_modify_current_theme_path', 10, 1 );
-		$active_skin = coaching_pro_get_active_skin_slug();
+		$active_skin = coaching_pro_get_active_skin_slug(); // This function is defined in /lib/skins-setup.php.
 
 		$theme_json_dir = '/config/skins/' . $active_skin;
 		if ( $theme_json_dir && file_exists( $stylesheet_directory . $theme_json_dir . '/theme.json' ) ) {

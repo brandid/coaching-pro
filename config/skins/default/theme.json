@@ -39,6 +39,16 @@
 				"xl": "1341px",
 				"xxl": "1600px"
 			},
+			"core": {
+				"pullquote": {
+					"margin": "0",
+					"padding": "0"
+				},
+				"quote": {
+					"margin": "0",
+					"padding": "0"
+				}
+			},
 			"typography": {
 				"fontSize": {
 					"body": "clamp( 14px, calc(1vw + 1rem), 17px )",
@@ -152,6 +162,46 @@
 			"core/paragraph": {
 				"color": {
 					"text": "#8A8A8A"
+				}
+			},
+			"core/pullquote": {
+				"color": {
+					"text": "#D26A48",
+					"background": "#F7F7F7 !important"
+				},
+				"spacing": {
+					"margin": {
+						"top": "1em",
+						"bottom": "1em",
+						"left": "0",
+						"right": "0"
+					},
+					"padding": {
+						"top": "clamp( 17px, calc(1.25vw + 1rem), 24px )",
+						"bottom": "clamp( 17px, calc(1.25vw + 1rem), 24px )",
+						"left": "clamp( 16px, calc(1vw + 1rem), 20px )",
+						"right": "clamp( 16px, calc(1vw + 1rem), 20px )"
+					}
+				}
+			},
+			"core/quote": {
+				"color": {
+					"text": "#D26A48",
+					"background": "#F7F7F7 !important"
+				},
+				"spacing": {
+					"margin": {
+						"top": "1em",
+						"bottom": "1em",
+						"left": "0",
+						"right": "0"
+					},
+					"padding": {
+						"top": "clamp( 17px, calc(1.25vw + 1rem), 24px )",
+						"bottom": "clamp( 17px, calc(1.25vw + 1rem), 24px )",
+						"left": "clamp( 16px, calc(1vw + 1rem), 20px )",
+						"right": "clamp( 16px, calc(1vw + 1rem), 20px )"
+					}
 				}
 			}
 		}

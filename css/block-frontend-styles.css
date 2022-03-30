@@ -1,0 +1,8 @@
+/* need to be extra specific here to override core styles */
+body .wp-block-pullquote blockquote {
+  margin: var(--wp--custom--core--pullquote--margin);
+  padding: var(--wp--custom--core--pullquote--padding); }
+
+.wp-block-quote blockquote {
+  margin: var(--wp--custom--core--quote--margin);
+  padding: var(--wp--custom--core--quote--padding); }

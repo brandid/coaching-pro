@@ -8,6 +8,13 @@
 // Set the Appearance settings defaults.
 $appearance = coaching_pro_get_skin_appearance();
 
+/**
+ * Updates settings *before* content is imported from the Skin switcher (found in WPADMIN->Genesis->Child Theme Settings).
+ *
+ * 
+ * Filter: genesis_onboarding_before_import_content
+ * 
+ */
 function coaching_pro_maybe_pre_cleanup() {
 	// Retrieve saved options.
 	$customizer_override = get_option( 'coaching_pro_skin_customizer_override' );

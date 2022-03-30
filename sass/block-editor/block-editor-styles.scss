@@ -175,13 +175,15 @@ body {
 
 /* PULL QUOTES
 --------------------------------------------- */
-.wp-block-pullquote {
+.wp-block-pullquote,
+.wp-block-quote {
 	&,
 	&.is-style-solid-color.has-background {
 		padding: 10px 20px;
 		blockquote {
 			max-width: 100%;
-			margin: 40px;
+			margin: 0;
+			padding: 0;
 		    &::before {
 		        content: "\201C";
 		        display: block;
@@ -194,6 +196,7 @@ body {
 			&::before,
 			p,
 			.wp-block-pullquote__citation {
+				color: inherit;
 			    text-align: center;
 				font-style: normal;
 			}

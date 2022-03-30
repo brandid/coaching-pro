@@ -2027,6 +2027,10 @@ input[type="submit"]:hover {
 
 /* PULLQUOTE
 ----------------------------- */
+.wp-block-pullquote blockquote {
+  margin: inherit;
+  padding: inherit; }
+
 .wp-block-pullquote, .wp-block-pullquote.is-style-solid-color.has-background {
   padding: 10px 20px; }
   .wp-block-pullquote blockquote, .wp-block-pullquote.is-style-solid-color.has-background blockquote {
@@ -2192,3 +2196,12 @@ input[type="submit"]:hover {
   ol,
   ul {
     page-break-before: avoid; } }
+
+/* need to be extra specific here to override core styles */
+body .wp-block-pullquote blockquote {
+  margin: var(--wp--custom--core--pullquote--margin);
+  padding: var(--wp--custom--core--pullquote--padding); }
+
+.wp-block-quote blockquote {
+  margin: var(--wp--custom--core--quote--margin);
+  padding: var(--wp--custom--core--quote--padding); }

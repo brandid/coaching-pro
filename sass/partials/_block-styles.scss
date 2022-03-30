@@ -142,6 +142,10 @@
 /* PULLQUOTE
 ----------------------------- */
 .wp-block-pullquote {
+	blockquote {
+		margin: inherit;
+		padding: inherit;
+	}
 	&,
 	&.is-style-solid-color.has-background {
 		padding: 10px 20px;

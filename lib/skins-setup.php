@@ -59,3 +59,11 @@ function coaching_pro_add_skin_body_class( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'coaching_pro_add_skin_body_class' );
+
+// Outputs block styles inline.
+add_filter( 'should_load_separate_core_block_assets', '__return_true' );
+
+function coaching_pro_dequeue_block_styles() {
+	// wp_deregister_style( 'wp-block-pullquote' ); todo - find a way to load block styles after theme styles.
+}
+add_action( 'wp_enqueue_scripts', 'coaching_pro_dequeue_block_styles', 1000 );
