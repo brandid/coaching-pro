@@ -29,7 +29,7 @@
 		},
 		"custom": {
 			"maxWidth": "1280px",
-			"globalBorderRadius": "4px",
+			"globalBorderRadius": "25px",
 			"screens": {
 				"small": "320px",
 				"small-2": "600px",
@@ -136,7 +136,7 @@
 		"spacing": {
 			"margin": true,
 			"padding": true,
-			"units": [ "px", "em", "rem", "vh", "vw" ]
+			"units": ["px", "em", "rem", "vh", "vw"]
 		}
 	},
 	"styles": {
@@ -158,7 +158,7 @@
 			"lineHeight": "40px",
 			"fontWeight": "300"
 		},
-		"blocks":{
+		"blocks": {
 			"core/paragraph": {
 				"color": {
 					"text": "#8A8A8A"
@@ -202,6 +202,25 @@
 						"left": "clamp( 16px, calc(1vw + 1rem), 20px )",
 						"right": "clamp( 16px, calc(1vw + 1rem), 20px )"
 					}
+				}
+			},
+			"core/button": {
+				"spacing": {
+					"padding": {
+						"top": "18px",
+						"bottom": "18px",
+						"right": "20px",
+						"left": "20px"
+					},
+					"margin": {
+						"top": "20px",
+						"bottom": "20px"
+					}
+				},
+				"typography": {
+					"fontSize": "18px",
+					"fontFamily": "Montserrat, sans-serif",
+					"lineHeight": "16px"
 				}
 			}
 		}
