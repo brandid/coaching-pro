@@ -10,7 +10,7 @@
 .transparent-header .site-header:not(.sticky),
 .transparent-header .site-header.sticky.scrolled,
 body:not(.transparent-header) .site-header {
-    background-color: $theme-color8 !important;
+    background-color: var( --wp--custom--colors--header--background ) !important;
 }
 
 /* ## Default Menu Colors

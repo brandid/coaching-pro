@@ -1747,7 +1747,7 @@ p.entry-meta {
 .transparent-header .site-header:not(.sticky),
 .transparent-header .site-header.sticky.scrolled,
 body:not(.transparent-header) .site-header {
-  background-color: var(--wp--preset--color--theme-color-8) !important; }
+  background-color: var(--wp--custom--colors--header--background) !important; }
 
 /* ## Default Menu Colors
 --------------------------------------------- */
@@ -2099,6 +2099,26 @@ input[type="submit"]:hover {
       font-weight: 700; }
       .gb-block-post-grid .gb-post-grid-items.is-grid article.entry a.gb-block-post-grid-more-link:hover {
         text-decoration: underline; }
+
+/* Widget Search */
+.widget_search .wp-block-search label.wp-block-search__label {
+  color: var(--wp--custom--widgets--search--label--color);
+  font-weight: var(--wp--custom--widgets--search--label--font-weight); }
+
+.widget_block .widget-wrap h2 {
+  font-size: var(--wp--custom--widgets--headings--h-2--font-size);
+  line-height: 1.3;
+  margin: 10px 0 15px 0; }
+
+.widget_block .widget-wrap h3 {
+  font-size: var(--wp--custom--widgets--headings--h-3--font-size);
+  line-height: 1.2; }
+
+.widget_block .widget-wrap ul {
+  margin-top: 15px; }
+
+.widget_block .widget-wrap li {
+  line-height: 1.2; }
 
 /* # Print Styles
 ---------------------------------------------------------------------------------------------------- */
