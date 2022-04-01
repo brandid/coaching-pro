@@ -8,5 +8,5 @@ html {
 /* CUSTOM BLOCK STYLES
 ----------------------------------------------------------------------------- */
 .is-style-roundedcorners {
-  border-radius: var(--wp--custom--global-border-radius);
+  border-radius: 4px;
   overflow: hidden; }
