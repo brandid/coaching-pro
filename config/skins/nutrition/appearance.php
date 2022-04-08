@@ -12,9 +12,9 @@ $coachpro_default_colors = array(
 	'color3'     => '#a3b18a',
 	'color4'     => '#d46a43',
 	'textcolor1' => '#827467',
-	'textcolor2' => '#827467',
+	'textcolor2' => '#564f49',
 	'bgcolor1'   => '#f0efee',
-	'bgcolor2'   => '#f8f8f8',
+	'bgcolor2'   => '#dad7cd',
 	'white'      => '#ffffff',
 	'black'      => '#000000',
 );
