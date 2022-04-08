@@ -139,6 +139,11 @@
 					"name": "Heading 2:  "
 				},
 				{
+					"slug": "heading-3",
+					"size": "50px",
+					"name": "Heading 3:  "
+				},
+				{
 					"slug": "sub-heading",
 					"size": "36px",
 					"name": "Sub-heading:  "

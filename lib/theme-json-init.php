@@ -23,7 +23,7 @@ function coaching_pro_modify_current_theme_path( $template_dir ) {
 	 */
 	$callback_class = $debug[4]['class'] ?? false;
 	$callback_function = $debug[4]['function'] ?? false;
-	if ( 'WP_Theme_JSON_Resolver' === $callback_class && 'get_file_path_from_theme' === $callback_function ) {
+	if ( ( 'WP_Theme_JSON_Resolver' === $callback_class || 'WP_Theme_JSON_Resolver_5_9' === $callback_class ) && 'get_file_path_from_theme' === $callback_function ) {
 		remove_filter( 'stylesheet_directory', 'coaching_pro_modify_current_theme_path', 10, 1 );
 		$stylesheet_directory = get_stylesheet_directory();
 		add_filter( 'stylesheet_directory', 'coaching_pro_modify_current_theme_path', 10, 1 );
