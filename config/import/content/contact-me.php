@@ -8,8 +8,9 @@
  */
 
 // Get default images.
-$coachingpro_contact1 = CHILD_URL . '/config/import/images/demo-contact-1.jpg';
-$coachingpro_contact2 = CHILD_URL . '/config/import/images/demo-homepage-hero.jpg';
+$skin_slug = coaching_pro_get_active_skin_slug();
+$coachingpro_contact1 = CHILD_URL . '/config/skins/' . $skin_slug . '/images/demo-contact-1.jpg';
+$coachingpro_contact2 = CHILD_URL . '/config/skins/' . $skin_slug . '/images/demo-homepage-hero.jpg';
 
 // Output page content.
 return <<<CONTENT

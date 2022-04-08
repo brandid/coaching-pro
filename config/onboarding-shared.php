@@ -21,7 +21,10 @@
  *
  */
 
-return array(
+$skin_slug = coaching_pro_get_active_skin_slug();
+
+
+$content = array(
 	'dependencies'     => genesis_get_config( 'onboarding-shared-plugins' ),
 	'content'          => array(
 		'homepage'      => array(
@@ -90,7 +93,7 @@ return array(
 			'post_content'   => require dirname( __FILE__ ) . '/import/content/blog/blog-post-1.php',
 			'post_type'      => 'post',
 			'post_status'    => 'publish',
-			'featured_image' => CHILD_URL . '/config/import/images/demo-blog-post-1.jpg', // Source: {https://unsplash.com/photos/RgPQNvoIcdg}.
+			'featured_image' => CHILD_URL . '/config/skins/' . $skin_slug . '/images/demo-blog-post-1.jpg', // Source: {https://unsplash.com/photos/RgPQNvoIcdg}.
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
 			'meta_input'     => array( '_generated_page' => '1' ),
@@ -100,7 +103,7 @@ return array(
 			'post_content'   => require dirname( __FILE__ ) . '/import/content/blog/blog-post-2.php',
 			'post_type'      => 'post',
 			'post_status'    => 'publish',
-			'featured_image' => CHILD_URL . '/config/import/images/demo-blog-post-2.jpg', // Source: {https://unsplash.com/photos/--kQ4tBklJI}.
+			'featured_image' => CHILD_URL . '/config/skins/' . $skin_slug . '/images/demo-blog-post-2.jpg', // Source: {https://unsplash.com/photos/--kQ4tBklJI}.
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
 			'meta_input'     => array( '_generated_page' => '1' ),
@@ -110,7 +113,7 @@ return array(
 			'post_content'   => require dirname( __FILE__ ) . '/import/content/blog/blog-post-3.php',
 			'post_type'      => 'post',
 			'post_status'    => 'publish',
-			'featured_image' => CHILD_URL . '/config/import/images/demo-blog-post-3.jpg', // Source: {https://unsplash.com/photos/VtKoSy_XzNU}.
+			'featured_image' => CHILD_URL . '/config/skins/' . $skin_slug . '/images/demo-blog-post-3.jpg', // Source: {https://unsplash.com/photos/VtKoSy_XzNU}.
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
 			'meta_input'     => array( '_generated_page' => '1' ),
@@ -120,7 +123,7 @@ return array(
 			'post_content'   => require dirname( __FILE__ ) . '/import/content/blog/blog-post-4.php',
 			'post_type'      => 'post',
 			'post_status'    => 'publish',
-			'featured_image' => CHILD_URL . '/config/import/images/demo-blog-post-4.jpg', // Source: {https://unsplash.com/photos/5U_28ojjgms}.
+			'featured_image' => CHILD_URL . '/config/skins/' . $skin_slug . '/images/demo-blog-post-4.jpg', // Source: {https://unsplash.com/photos/5U_28ojjgms}.
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
 			'meta_input'     => array( '_generated_page' => '1' ),
@@ -130,7 +133,7 @@ return array(
 			'post_content'   => require dirname( __FILE__ ) . '/import/content/blog/blog-post-5.php',
 			'post_type'      => 'post',
 			'post_status'    => 'publish',
-			'featured_image' => CHILD_URL . '/config/import/images/demo-blog-post-5.jpg', // Source: {https://unsplash.com/photos/-8DAN9_oi8g}.
+			'featured_image' => CHILD_URL . '/config/skins/' . $skin_slug . '/images/demo-blog-post-5.jpg', // Source: {https://unsplash.com/photos/-8DAN9_oi8g}.
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
 		),
@@ -139,7 +142,7 @@ return array(
 			'post_content'   => require dirname( __FILE__ ) . '/import/content/blog/blog-post-6.php',
 			'post_type'      => 'post',
 			'post_status'    => 'publish',
-			'featured_image' => CHILD_URL . '/config/import/images/demo-blog-post-6.jpg', // Source: {https://unsplash.com/photos/DXobXpIa9_4}.
+			'featured_image' => CHILD_URL . '/config/skins/' . $skin_slug . '/images/demo-blog-post-6.jpg', // Source: {https://unsplash.com/photos/DXobXpIa9_4}.
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
 			'meta_input'     => array( '_generated_page' => '1' ),
@@ -149,7 +152,7 @@ return array(
 			'post_content'   => require dirname( __FILE__ ) . '/import/content/blog/blog-post-7.php',
 			'post_type'      => 'post',
 			'post_status'    => 'publish',
-			'featured_image' => CHILD_URL . '/config/import/images/demo-blog-post-7.jpg', // Source: {https://unsplash.com/photos/Be5aVKFv9ho}.
+			'featured_image' => CHILD_URL . '/config/skins/' . $skin_slug . '/images/demo-blog-post-7.jpg', // Source: {https://unsplash.com/photos/Be5aVKFv9ho}.
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
 			'meta_input'     => array( '_generated_page' => '1' ),
@@ -159,7 +162,7 @@ return array(
 			'post_content'   => require dirname( __FILE__ ) . '/import/content/blog/blog-post-8.php',
 			'post_type'      => 'post',
 			'post_status'    => 'publish',
-			'featured_image' => CHILD_URL . '/config/import/images/demo-blog-post-8.jpg', // Source: {https://unsplash.com/photos/8tvoDBqOHZU}.
+			'featured_image' => CHILD_URL . '/config/skins/' . $skin_slug . '/images/demo-blog-post-8.jpg', // Source: {https://unsplash.com/photos/8tvoDBqOHZU}.
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
 			'meta_input'     => array( '_generated_page' => '1' ),
@@ -169,7 +172,7 @@ return array(
 			'post_content'   => require dirname( __FILE__ ) . '/import/content/blog/blog-post-9.php',
 			'post_type'      => 'post',
 			'post_status'    => 'publish',
-			'featured_image' => CHILD_URL . '/config/import/images/demo-blog-post-9.jpg', // Source: {https://unsplash.com/photos/Hcfwew744z4}.
+			'featured_image' => CHILD_URL . '/config/skins/' . $skin_slug . '/images/demo-blog-post-9.jpg', // Source: {https://unsplash.com/photos/Hcfwew744z4}.
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
 			'meta_input'     => array( '_generated_page' => '1' ),
@@ -179,7 +182,7 @@ return array(
 			'post_content'   => require dirname( __FILE__ ) . '/import/content/blog/blog-post-10.php',
 			'post_type'      => 'post',
 			'post_status'    => 'publish',
-			'featured_image' => CHILD_URL . '/config/import/images/demo-blog-post-10.jpg', // Source: {https://unsplash.com/photos/TXxiFuQLBKQ}.
+			'featured_image' => CHILD_URL . '/config/skins/' . $skin_slug . '/images/demo-blog-post-10.jpg', // Source: {https://unsplash.com/photos/TXxiFuQLBKQ}.
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
 			'meta_input'     => array( '_generated_page' => '1' ),
@@ -190,7 +193,7 @@ return array(
 			'post_content'   => '',
 			'post_type'      => 'socialproofslider',
 			'post_status'    => 'publish',
-			'featured_image' => CHILD_URL . '/config/import/images/demo-testimonial-1.jpg', // Source: {https://unsplash.com/photos/TXxiFuQLBKQ}.
+			'featured_image' => CHILD_URL . '/config/skins/' . $skin_slug . '/images/demo-testimonial-1.jpg', // Source: {https://unsplash.com/photos/TXxiFuQLBKQ}.
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
 			'meta_input'     => require dirname( __FILE__ ) . '/import/content/testimonials/sample-testimonial-1.php',
@@ -200,7 +203,7 @@ return array(
 			'post_content'   => '',
 			'post_type'      => 'socialproofslider',
 			'post_status'    => 'publish',
-			'featured_image' => CHILD_URL . '/config/import/images/demo-testimonial-2.jpg', // Source: {https://unsplash.com/photos/k-BWMCE1FNo}.
+			'featured_image' => CHILD_URL . '/config/skins/' . $skin_slug . '/images/demo-testimonial-2.jpg', // Source: {https://unsplash.com/photos/k-BWMCE1FNo}.
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
 			'meta_input'     => require dirname( __FILE__ ) . '/import/content/testimonials/sample-testimonial-2.php',
@@ -210,7 +213,7 @@ return array(
 			'post_content'   => '',
 			'post_type'      => 'socialproofslider',
 			'post_status'    => 'publish',
-			'featured_image' => CHILD_URL . '/config/import/images/demo-testimonial-3.jpg', // Source: {https://unsplash.com/photos/RQhV1Kj9uXY}.
+			'featured_image' => CHILD_URL . '/config/skins/' . $skin_slug . '/images/demo-testimonial-3.jpg', // Source: {https://unsplash.com/photos/RQhV1Kj9uXY}.
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
 			'meta_input'     => require dirname( __FILE__ ) . '/import/content/testimonials/sample-testimonial-3.php',
@@ -220,7 +223,7 @@ return array(
 			'post_content'   => '',
 			'post_type'      => 'socialproofslider',
 			'post_status'    => 'publish',
-			'featured_image' => CHILD_URL . '/config/import/images/demo-testimonial-4.jpg', // Source: {https://unsplash.com/photos/VtKoSy_XzNU}.
+			'featured_image' => CHILD_URL . '/config/skins/' . $skin_slug . '/images/demo-testimonial-4.jpg', // Source: {https://unsplash.com/photos/VtKoSy_XzNU}.
 			'comment_status' => 'closed',
 			'ping_status'    => 'closed',
 			'meta_input'     => require dirname( __FILE__ ) . '/import/content/testimonials/sample-testimonial-4.php',
@@ -260,3 +263,5 @@ return array(
 		),
 	),
 );
+
+return $content;
