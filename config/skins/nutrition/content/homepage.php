@@ -31,9 +31,9 @@ return <<<CONTENT
 <h1><strong>Coaching just got better</strong></h1>
 <!-- /wp:heading -->
 
-<!-- wp:heading {"level":4} -->
-<h4>Whatever your expertise, whatever your calling, <strong>Coaching Pro</strong> makes it easy to put yourself out there.</h4>
-<!-- /wp:heading -->
+<!-- wp:paragraph {"textColor":"white","fontSize":"large"} -->
+<p class="has-white-color has-text-color has-large-font-size">Whatever your expertise, whatever your calling, <strong>Coaching Pro</strong> makes it easy to put yourself out there.</p>
+<!-- /wp:paragraph -->
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center","orientation":"horizontal"}} -->
 <div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"white","textColor":"theme-color-4"} -->

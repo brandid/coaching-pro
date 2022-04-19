@@ -37,7 +37,7 @@ $coachpro_default_fonts = array(
 	'h4'      => 'Playfair Display',
 	'h5'      => 'Playfair Display',
 	'h6'      => 'Playfair Display',
-	'navmenu' => 'Playfair Display',
+	'navmenu' => 'Raleway',
 	'body'    => 'Raleway',
 );
 

@@ -50,7 +50,9 @@
 					"h4": "clamp( 18px, calc(1.75vw + 1rem), 30px )",
 					"h5": "clamp( 17px, calc(1.25vw + 1rem), 24px )",
 					"h6": "clamp( 16px, calc(1vw + 1rem), 20px )",
-					"html": "62.5%"
+					"html": "62.5%",
+					"siteDescription": "clamp( 16px, calc(1.25vw + 1rem), 18px )",
+					"menuItem": "clamp(16px, 2.5vw, 18px);"
 				},
 				"fontWeight": {
 					"body": "300",

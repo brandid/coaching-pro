@@ -1037,8 +1037,12 @@ body.custom-logo.transparent-header .site-header.scrolled .title-area a .svg .fi
   max-width: 300px;
   padding: 0; }
 
+.site-container p.site-title {
+  font-family: var(--wp--preset--font-family--coaching-pro-heading-font);
+  margin-bottom: 8px; }
+
 .site-title {
-  font-size: var(--wp--custom--typography--font-size--h-4);
+  font-size: var(--wp--custom--typography--font-size--h-3);
   font-weight: 700;
   line-height: 1.2; }
   .site-title a,
@@ -1063,7 +1067,7 @@ body.custom-logo.transparent-header .site-header.scrolled .title-area a .svg .fi
   text-align: center; }
 
 .site-description {
-  font-size: 0.8em;
+  font-size: var(--wp--custom--typography--font-size--site-description);
   font-weight: 400;
   line-height: 1.5;
   margin-bottom: 0; }
@@ -1092,7 +1096,7 @@ body.custom-logo.transparent-header .site-header.scrolled .title-area a .svg .fi
   .genesis-nav-menu .wrap {
     padding: 0; }
   .genesis-nav-menu .menu-item {
-    font-size: clamp(14px, 2.5vw, 16px);
+    font-size: var(--wp--custom--typography--font-size--menu-item);
     font-weight: 400;
     line-height: 1;
     display: inline-block;
@@ -1345,7 +1349,7 @@ body.custom-logo.transparent-header .site-header.scrolled .title-area a .svg .fi
     .nav-primary.genesis-responsive-menu {
       background-color: transparent; } }
   .nav-primary ul#menu-primary-navigation li a {
-    font-size: clamp(14px, 2.5vw, 16px); }
+    font-size: var(--wp--custom--typography--font-size--menu-item); }
 
 .js .nav-primary {
   display: none; }
@@ -1783,7 +1787,7 @@ body.transparent-header header.sticky:not(.scrolled) .genesis-responsive-menu .g
 body.transparent-header header.sticky.scrolled .genesis-responsive-menu .genesis-nav-menu .menu-item .sub-menu {
   background: var(--wp--preset--color--theme-color-7); }
   body.transparent-header header.sticky.scrolled .genesis-responsive-menu .genesis-nav-menu .menu-item .sub-menu a {
-    color: var(--wp--preset--color--soft-black); }
+    color: var(--wp--preset--color--theme-color-4); }
 
 body.transparent-header header.sticky.scrolled .genesis-responsive-menu .genesis-nav-menu .menu-item .sub-menu,
 body.transparent-header header.sticky.scrolled .genesis-responsive-menu .genesis-nav-menu .menu-item .sub-menu a {
@@ -1792,7 +1796,7 @@ body.transparent-header header.sticky.scrolled .genesis-responsive-menu .genesis
 .genesis-nav-menu .sub-menu {
   background: var(--wp--preset--color--theme-color-7); }
   .genesis-nav-menu .sub-menu a {
-    color: var(--wp--preset--color--soft-black); }
+    color: var(--wp--preset--color--theme-color-4); }
 
 .genesis-nav-menu .sub-menu,
 .genesis-nav-menu .sub-menu a {
@@ -1803,7 +1807,7 @@ body.transparent-header header.sticky.scrolled .genesis-responsive-menu .genesis
   .menu-toggle:focus, .menu-toggle:hover {
     background-color: var(--wp--preset--color--soft-white); }
   .menu-toggle .activated .genesis-nav-menu a {
-    color: var(--wp--preset--color--soft-black); }
+    color: var(--wp--preset--color--theme-color-4); }
 
 .sub-menu-toggle:focus, .sub-menu-toggle:hover {
   background-color: rgba(0, 0, 0, 0.5);
@@ -1820,7 +1824,7 @@ body.transparent-header header.sticky.scrolled .genesis-responsive-menu .genesis
     .genesis-responsive-menu .genesis-nav-menu .sub-menu {
       border-top-color: var(--wp--preset--color--white); } }
   .genesis-responsive-menu .genesis-nav-menu .sub-menu a {
-    color: var(--wp--preset--color--soft-black); }
+    color: var(--wp--preset--color--theme-color-4); }
   .genesis-responsive-menu .genesis-nav-menu .sub-menu,
   .genesis-responsive-menu .genesis-nav-menu .sub-menu a {
     border-color: var(--wp--preset--color--white); }
@@ -1877,7 +1881,7 @@ input[type="submit"]:hover {
 .genesis-nav-menu .current-menu-item > a > span,
 .genesis-nav-menu a:focus span,
 .genesis-nav-menu a:hover span {
-  border-bottom: 2px solid; }
+  border-bottom: 2px solid var(--wp--preset--color--theme-color-4); }
 
 .genesis-nav-menu .genesis-nav-menu .sub-menu .current-menu-item a,
 .genesis-nav-menu .genesis-nav-menu .sub-menu .current-menu-item > a:focus,
@@ -1885,7 +1889,7 @@ input[type="submit"]:hover {
 .genesis-nav-menu .genesis-nav-menu .sub-menu a,
 .genesis-nav-menu .genesis-nav-menu .sub-menu a:focus,
 .genesis-nav-menu .genesis-nav-menu .sub-menu a:hover {
-  color: var(--wp--preset--color--soft-black); }
+  color: var(--wp--preset--color--theme-color-4); }
 
 .genesis-nav-menu .genesis-nav-menu .sub-menu .current-menu-item > a > span,
 .genesis-nav-menu .genesis-nav-menu .sub-menu .current-menu-item > a:focus > span,
@@ -1893,23 +1897,23 @@ input[type="submit"]:hover {
 .genesis-nav-menu .genesis-nav-menu .sub-menu .sub-menu a:focus > span,
 .genesis-nav-menu .genesis-nav-menu .sub-menu .sub-menu a:hover > span {
   border-bottom: 2px solid;
-  border-bottom-color: var(--wp--preset--color--soft-black); }
+  border-bottom-color: var(--wp--preset--color--theme-color-4); }
 
 /* ## RESPONSIVE MENU
 --------------------------------------------- */
 @media screen and (min-width: 768px) {
   .genesis-responsive-menu .genesis-nav-menu a:focus,
   .genesis-responsive-menu .genesis-nav-menu a:hover {
-    color: var(--wp--preset--color--soft-black); } }
+    color: var(--wp--preset--color--theme-color-4); } }
 
 /* ## FOOTER MENU
 --------------------------------------------- */
 .site-footer .genesis-nav-menu .current-menu-item > a:focus,
 .site-footer .genesis-nav-menu .current-menu-item > a:hover {
-  color: var(--wp--preset--color--soft-black); }
+  color: var(--wp--preset--color--theme-color-4); }
   .site-footer .genesis-nav-menu .current-menu-item > a:focus > span,
   .site-footer .genesis-nav-menu .current-menu-item > a:hover > span {
-    border-bottom-color: var(--wp--preset--color--soft-black); }
+    border-bottom-color: var(--wp--preset--color--theme-color-4); }
 
 .site-footer .genesis-nav-menu .current-menu-item span,
 .site-footer .genesis-nav-menu a:focus span,
@@ -1919,12 +1923,12 @@ input[type="submit"]:hover {
 .site-footer .genesis-nav-menu .current-menu-item a > span,
 .site-footer .genesis-nav-menu a:focus > span,
 .site-footer .genesis-nav-menu a:hover > span {
-  border-bottom: 2px solid var(--wp--preset--color--soft-black); }
+  border-bottom: 2px solid var(--wp--preset--color--theme-color-4); }
 
 .site-footer .genesis-nav-menu .sub-menu a {
-  color: var(--wp--preset--color--soft-black); }
+  color: var(--wp--preset--color--theme-color-4); }
   .site-footer .genesis-nav-menu .sub-menu a span {
-    border-color: var(--wp--preset--color--soft-black); }
+    border-color: var(--wp--preset--color--theme-color-4); }
 
 /* BLOCK STYLES
 ----------------------------------------------------------------------------- */
