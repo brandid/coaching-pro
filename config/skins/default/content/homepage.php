@@ -166,7 +166,7 @@ return <<<CONTENT
 <!-- wp:genesis-blocks/gb-columns {"columns":3,"layout":"gb-3-col-equal","columnsGap":4,"marginTop":40} -->
 <div class="wp-block-genesis-blocks-gb-columns gb-layout-columns-3 gb-3-col-equal" style="margin-top:40px"><div class="gb-layout-column-wrap gb-block-layout-column-gap-4 gb-is-responsive-column"><!-- wp:genesis-blocks/gb-column {"textAlign":"center"} -->
 <div class="wp-block-genesis-blocks-gb-column gb-block-layout-column"><div class="gb-block-layout-column-inner" style="text-align:center"><!-- wp:image {"align":"center","linkDestination":"none","className":"size-large"} -->
-<div class="wp-block-image size-large"><figure class="aligncenter"><img src="https://coachingpro.local/wp-content/themes/coaching-pro/config/skins/default/images/demo-icon-leap.png" alt=""/></figure></div>
+<div class="wp-block-image size-large"><figure class="aligncenter"><img src="$coachingpro_icon_leap" alt=""/></figure></div>
 <!-- /wp:image -->
 
 <!-- wp:heading {"textAlign":"center","level":4,"textColor":"theme-color-4"} -->

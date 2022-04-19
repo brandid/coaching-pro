@@ -44,13 +44,13 @@ return <<<CONTENT
 <!-- /wp:genesis-blocks/gb-columns -->
 
 <!-- wp:genesis-blocks/gb-columns {"columns":2,"layout":"gb-2-col-equal","columnsGap":0,"align":"full","backgroundColor":"white","columnMaxWidth":0} -->
-<div class="wp-block-genesis-blocks-gb-columns gb-layout-columns-2 gb-2-col-equal has-white-background-color alignfull"><div class="gb-layout-column-wrap gb-block-layout-column-gap-0 gb-is-responsive-column"><!-- wp:genesis-blocks/gb-column {"backgroundColor":"bgcolorone","textAlign":"right","paddingSync":true,"paddingUnit":"%","padding":10,"columnVerticalAlignment":"center"} -->
-<div class="wp-block-genesis-blocks-gb-column gb-block-layout-column gb-is-vertically-aligned-center"><div class="gb-block-layout-column-inner has-bgcolorone-background-color" style="padding:10%;text-align:right"><!-- wp:heading {"textColor":"theme-color-3","fontSize":"heading-3"} -->
-<h2 class="has-theme-color-3-color has-text-color has-heading-3-font-size">High Impact<br>Video Feature</h2>
+<div class="wp-block-genesis-blocks-gb-columns gb-layout-columns-2 gb-2-col-equal has-white-background-color alignfull"><div class="gb-layout-column-wrap gb-block-layout-column-gap-0 gb-is-responsive-column"><!-- wp:genesis-blocks/gb-column {"backgroundColor":"theme-color-3","textAlign":"right","paddingSync":true,"paddingUnit":"%","padding":10,"columnVerticalAlignment":"center"} -->
+<div class="wp-block-genesis-blocks-gb-column gb-block-layout-column gb-is-vertically-aligned-center"><div class="gb-block-layout-column-inner has-theme-color-3-background-color" style="padding:10%;text-align:right"><!-- wp:heading {"style":{"typography":{"lineHeight":"1.1"},"color":{"text":"#344e41"}},"fontSize":"sub-heading"} -->
+<h2 class="has-text-color has-sub-heading-font-size" style="color:#344e41;line-height:1.1"><strong>High Impact<br>Video Feature</strong></h2>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"style":{"typography":{"fontSize":"22px"}}} -->
-<p style="font-size:22px">Intrigue your audience with valuable<br>information they can’t possibly pass up.</p>
+<!-- wp:paragraph {"style":{"typography":{"fontSize":"22px"}},"textColor":"white"} -->
+<p class="has-white-color has-text-color" style="font-size:22px">Intrigue your audience with valuable<br>information they can’t possibly pass up.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:image {"width":542,"height":361,"sizeSlug":"full","linkDestination":"custom","className":"is-style-roundedcorners"} -->
@@ -106,8 +106,8 @@ return <<<CONTENT
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"left","orientation":"horizontal"}} -->
-<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"colortwo","textColor":"white"} -->
-<div class="wp-block-button"><a class="wp-block-button__link has-white-color has-colortwo-background-color has-text-color has-background" href="https://www.thebrandid.me/coaching-pro" target="_blank" rel="noreferrer noopener">Buy Theme</a></div>
+<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"theme-color-4","textColor":"white"} -->
+<div class="wp-block-button"><a class="wp-block-button__link has-white-color has-theme-color-4-background-color has-text-color has-background" href="https://www.thebrandid.me/coaching-pro" target="_blank" rel="noreferrer noopener">Buy Theme</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons -->
 
@@ -148,61 +148,60 @@ return <<<CONTENT
 <!-- /wp:genesis-blocks/gb-columns --></div></div>
 <!-- /wp:genesis-blocks/gb-column --></div></div>
 <!-- /wp:genesis-blocks/gb-columns -->
-
-<!-- wp:genesis-blocks/gb-columns {"columns":1,"layout":"one-column","align":"full","padding":40,"paddingTop":80,"paddingRight":40,"paddingBottom":80,"paddingLeft":40,"textColor":"white","backgroundColor":"theme-color-9","columnMaxWidth":900} -->
-<div class="wp-block-genesis-blocks-gb-columns gb-layout-columns-1 one-column has-theme-color-9-background-color has-white-color gb-columns-center alignfull" style="padding-top:80px;padding-right:40px;padding-bottom:80px;padding-left:40px"><div class="gb-layout-column-wrap gb-block-layout-column-gap-2 gb-is-responsive-column" style="max-width:900px"><!-- wp:genesis-blocks/gb-column {"textAlign":"center"} -->
-<div class="wp-block-genesis-blocks-gb-column gb-block-layout-column"><div class="gb-block-layout-column-inner" style="text-align:center"><!-- wp:heading {"textColor":"theme-color-5"} -->
-<h2 class="has-theme-color-5-color has-text-color">How it all works</h2>
+<!-- wp:genesis-blocks/gb-columns {"columns":1,"layout":"one-column","align":"full","padding":40,"paddingTop":80,"paddingRight":40,"paddingBottom":80,"paddingLeft":40,"textColor":"white","backgroundColor":"theme-color-1","columnMaxWidth":900} -->
+<div class="wp-block-genesis-blocks-gb-columns gb-layout-columns-1 one-column has-theme-color-1-background-color has-white-color gb-columns-center alignfull" style="padding-top:80px;padding-right:40px;padding-bottom:80px;padding-left:40px"><div class="gb-layout-column-wrap gb-block-layout-column-gap-2 gb-is-responsive-column" style="max-width:900px"><!-- wp:genesis-blocks/gb-column {"textAlign":"center"} -->
+<div class="wp-block-genesis-blocks-gb-column gb-block-layout-column"><div class="gb-block-layout-column-inner" style="text-align:center"><!-- wp:heading {"textColor":"theme-color-4"} -->
+<h2 class="has-theme-color-4-color has-text-color">How it all works</h2>
 <!-- /wp:heading -->
 
-<!-- wp:heading {"level":3,"textColor":"theme-color-4"} -->
-<h3 class="has-theme-color-4-color has-text-color"><strong>Steps to Your Success</strong></h3>
+<!-- wp:heading {"level":3,"textColor":"white"} -->
+<h3 class="has-white-color has-text-color"><strong>Steps to Your Success</strong></h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"textColor":"theme-color-6"} -->
-<p class="has-theme-color-6-color has-text-color">Outline your philosophy, method, training plan, or course so it’s inviting and inspiring.</p>
+<!-- wp:paragraph {"textColor":"white","fontSize":"large"} -->
+<p class="has-white-color has-text-color has-large-font-size">Outline your philosophy, method, training plan, or course so it’s inviting and inspiring.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:genesis-blocks/gb-columns {"columns":3,"layout":"gb-3-col-equal","columnsGap":4,"marginTop":40} -->
-<div class="wp-block-genesis-blocks-gb-columns gb-layout-columns-3 gb-3-col-equal" style="margin-top:40px"><div class="gb-layout-column-wrap gb-block-layout-column-gap-4 gb-is-responsive-column"><!-- wp:genesis-blocks/gb-column {"textAlign":"center"} -->
-<div class="wp-block-genesis-blocks-gb-column gb-block-layout-column"><div class="gb-block-layout-column-inner" style="text-align:center"><!-- wp:image {"align":"center","linkDestination":"none","className":"size-large"} -->
-<div class="wp-block-image size-large"><figure class="aligncenter"><img src="https://coachingpro.local/wp-content/themes/coaching-pro/config/skins/default/images/demo-icon-leap.png" alt=""/></figure></div>
+<div class="wp-block-genesis-blocks-gb-columns gb-layout-columns-3 gb-3-col-equal" style="margin-top:40px"><div class="gb-layout-column-wrap gb-block-layout-column-gap-4 gb-is-responsive-column"><!-- wp:genesis-blocks/gb-column {"textAlign":"left"} -->
+<div class="wp-block-genesis-blocks-gb-column gb-block-layout-column"><div class="gb-block-layout-column-inner" style="text-align:left"><!-- wp:image {"align":"left","linkDestination":"none","className":"size-large"} -->
+<div class="wp-block-image size-large"><figure class="alignleft"><img src="$coachingpro_icon_leap" alt=""/></figure></div>
 <!-- /wp:image -->
 
-<!-- wp:heading {"textAlign":"center","level":4,"textColor":"theme-color-4"} -->
-<h4 class="has-text-align-center has-theme-color-4-color has-text-color">Take the leap</h4>
+<!-- wp:heading {"textAlign":"left","level":4,"textColor":"theme-color-3"} -->
+<h4 class="has-text-align-left has-theme-color-3-color has-text-color">Take the leap</h4>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"align":"center","textColor":"theme-color-6"} -->
-<p class="has-text-align-center has-theme-color-6-color has-text-color">Start with your call to action, whether it relates to getting healthier, working strategically or living better.</p>
+<!-- wp:paragraph {"align":"left","textColor":"white","fontSize":"large"} -->
+<p class="has-text-align-left has-white-color has-text-color has-large-font-size">Start with your call to action, whether it relates to getting healthier, working strategically or living better.</p>
 <!-- /wp:paragraph --></div></div>
 <!-- /wp:genesis-blocks/gb-column -->
 
-<!-- wp:genesis-blocks/gb-column {"textAlign":"center"} -->
-<div class="wp-block-genesis-blocks-gb-column gb-block-layout-column"><div class="gb-block-layout-column-inner" style="text-align:center"><!-- wp:image {"align":"center","linkDestination":"none","className":"size-large"} -->
-<div class="wp-block-image size-large"><figure class="aligncenter"><img src="$coachingpro_icon_learn" alt=""/></figure></div>
+<!-- wp:genesis-blocks/gb-column {"textAlign":"left"} -->
+<div class="wp-block-genesis-blocks-gb-column gb-block-layout-column"><div class="gb-block-layout-column-inner" style="text-align:left"><!-- wp:image {"align":"left","linkDestination":"none","className":"size-large"} -->
+<div class="wp-block-image size-large"><figure class="alignleft"><img src="$coachingpro_icon_learn" alt=""/></figure></div>
 <!-- /wp:image -->
 
-<!-- wp:heading {"textAlign":"center","level":4,"textColor":"theme-color-4"} -->
-<h4 class="has-text-align-center has-theme-color-4-color has-text-color">Learn every day</h4>
+<!-- wp:heading {"textAlign":"left","level":4,"textColor":"theme-color-3"} -->
+<h4 class="has-text-align-left has-theme-color-3-color has-text-color">Learn every day</h4>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"align":"center","textColor":"theme-color-6"} -->
-<p class="has-text-align-center has-theme-color-6-color has-text-color">Let potential clients know what happens next, after they’ve made the decision to work with you.</p>
+<!-- wp:paragraph {"align":"left","textColor":"white","fontSize":"large"} -->
+<p class="has-text-align-left has-white-color has-text-color has-large-font-size">Let potential clients know what happens next, after they’ve made the decision to work with you.</p>
 <!-- /wp:paragraph --></div></div>
 <!-- /wp:genesis-blocks/gb-column -->
 
-<!-- wp:genesis-blocks/gb-column {"textAlign":"center"} -->
-<div class="wp-block-genesis-blocks-gb-column gb-block-layout-column"><div class="gb-block-layout-column-inner" style="text-align:center"><!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img src="$coachingpro_icon_life" alt=""/></figure>
+<!-- wp:genesis-blocks/gb-column {"textAlign":"left"} -->
+<div class="wp-block-genesis-blocks-gb-column gb-block-layout-column"><div class="gb-block-layout-column-inner" style="text-align:left"><!-- wp:image {"align":"left","sizeSlug":"large","linkDestination":"none"} -->
+<div class="wp-block-image"><figure class="alignleft size-large"><img src="$coachingpro_icon_life" alt=""/></figure></div>
 <!-- /wp:image -->
 
-<!-- wp:heading {"textAlign":"center","level":4,"textColor":"theme-color-4"} -->
-<h4 class="has-text-align-center has-theme-color-4-color has-text-color">Enjoy life</h4>
+<!-- wp:heading {"textAlign":"left","level":4,"textColor":"theme-color-3"} -->
+<h4 class="has-text-align-left has-theme-color-3-color has-text-color">Enjoy life</h4>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"align":"center","textColor":"theme-color-6"} -->
-<p class="has-text-align-center has-theme-color-6-color has-text-color">Show viewers the happy outcome and bright future you’ll help them build for themselves.</p>
+<!-- wp:paragraph {"align":"left","textColor":"white","fontSize":"large"} -->
+<p class="has-text-align-left has-white-color has-text-color has-large-font-size">Show viewers the happy outcome and bright future you’ll help them build for themselves.</p>
 <!-- /wp:paragraph --></div></div>
 <!-- /wp:genesis-blocks/gb-column --></div></div>
 <!-- /wp:genesis-blocks/gb-columns --></div></div>
@@ -227,13 +226,13 @@ return <<<CONTENT
 <!-- /wp:genesis-blocks/gb-column --></div></div>
 <!-- /wp:genesis-blocks/gb-columns -->
 
-<!-- wp:genesis-blocks/gb-columns {"columns":1,"layout":"one-column","align":"full","padding":40,"paddingTop":80,"paddingRight":40,"paddingBottom":40,"paddingLeft":40,"backgroundColor":"bgcolorone","columnMaxWidth":800} -->
-<div class="wp-block-genesis-blocks-gb-columns gb-layout-columns-1 one-column has-bgcolorone-background-color gb-columns-center alignfull" style="padding-top:80px;padding-right:40px;padding-bottom:40px;padding-left:40px"><div class="gb-layout-column-wrap gb-block-layout-column-gap-2 gb-is-responsive-column" style="max-width:800px"><!-- wp:genesis-blocks/gb-column {"textAlign":"center"} -->
-<div class="wp-block-genesis-blocks-gb-column gb-block-layout-column"><div class="gb-block-layout-column-inner" style="text-align:center"><!-- wp:heading -->
-<h2><strong>What people are saying</strong></h2>
+<!-- wp:genesis-blocks/gb-columns {"columns":1,"layout":"one-column","align":"full","padding":40,"paddingTop":80,"paddingRight":40,"paddingBottom":40,"paddingLeft":40,"customBackgroundColor":"#dad7ce","columnMaxWidth":800} -->
+<div class="wp-block-genesis-blocks-gb-columns gb-layout-columns-1 one-column gb-has-custom-background-color gb-columns-center alignfull" style="padding-top:80px;padding-right:40px;padding-bottom:40px;padding-left:40px;background-color:#dad7ce"><div class="gb-layout-column-wrap gb-block-layout-column-gap-2 gb-is-responsive-column" style="max-width:800px"><!-- wp:genesis-blocks/gb-column {"textAlign":"center"} -->
+<div class="wp-block-genesis-blocks-gb-column gb-block-layout-column"><div class="gb-block-layout-column-inner" style="text-align:center"><!-- wp:heading {"textColor":"theme-color-1"} -->
+<h2 class="has-theme-color-1-color has-text-color"><strong>What people are saying</strong></h2>
 <!-- /wp:heading -->
 
-<!-- wp:social-proof-slider/main {"showfeaturedimages":true,"imageborderradius":50,"showarrows":true,"showdots":true,"padding":0,"arrowscolor":"#d46a43","arrowshovercolor":"#6e6872","dotscolor":"#d46a43","dotshovercolor":"#6e6872","authornamecolor":"#d46a43"} /--></div></div>
+<!-- wp:social-proof-slider/main {"showfeaturedimages":true,"imageborderradius":50,"showarrows":true,"showdots":true,"padding":0,"arrowscolor":"#d46a43","arrowshovercolor":"#6e6872","dotscolor":"#d46a43","dotshovercolor":"#6e6872","testimonialtextcolor":"#827467","authornamecolor":"#d46a43"} /--></div></div>
 <!-- /wp:genesis-blocks/gb-column --></div></div>
 <!-- /wp:genesis-blocks/gb-columns -->
 CONTENT;

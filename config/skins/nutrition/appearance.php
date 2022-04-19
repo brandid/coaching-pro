@@ -38,7 +38,7 @@ $coachpro_default_fonts = array(
 	'h5'      => 'Playfair Display',
 	'h6'      => 'Playfair Display',
 	'navmenu' => 'Playfair Display',
-	'body'    => 'Playfair Display',
+	'body'    => 'Raleway',
 );
 
 // Define the Customizer fonts - assign the default font if it is not changed in the Customizer.

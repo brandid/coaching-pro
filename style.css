@@ -2082,6 +2082,12 @@ input[type="submit"]:hover {
         .wp-block-genesis-blocks-gb-columns.logos-small .wp-block-image img {
           max-width: 200px; } }
 
+/* Nutrition Custom block styles */
+.coaching-pro-skin-nutrition {
+  /* One-Column blocks. */ }
+  .coaching-pro-skin-nutrition .one-column .wp-block-genesis-blocks-gb-columns.gb-layout-columns-3 .wp-block-image {
+    margin-bottom: 0; }
+
 /* Blog post grid. */
 .gb-block-post-grid .gb-post-grid-items.is-grid {
   grid-gap: 2em; }

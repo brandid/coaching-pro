@@ -90,3 +90,11 @@ function coaching_pro_maybe_pre_cleanup() {
 	}
 }
 add_action( 'genesis_onboarding_before_import_content', 'coaching_pro_maybe_pre_cleanup' );
+
+/**
+ * Run after importing the content. Clears theme.json cache..
+ */
+function coaching_pro_after_import_content() {
+	WP_Theme_JSON_Resolver::clean_cached_data();
+}
+add_action( 'genesis_onboarding_after_import_content', 'coaching_pro_after_import_content' );
