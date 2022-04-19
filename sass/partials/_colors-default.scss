@@ -200,8 +200,8 @@ input[type="submit"]:hover {
     background-color: $theme-color8;
     color: $theme-color3;
     a {
-        color: $theme-color3;
-        border-bottom: 1px solid $theme-color3;
+        color: $theme-color1;
+        border-bottom: 1px solid $theme-color1;
         &:focus,
         &:hover {
             // color: $grey;

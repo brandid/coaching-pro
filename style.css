@@ -1653,6 +1653,7 @@ p.entry-meta {
     flex-wrap: wrap;
     justify-content: center; }
   .site-footer a {
+    color: var(--wp--preset--color--theme-color-1);
     text-decoration: none;
     border-bottom: 1px solid transparent; }
     .site-footer a:focus, .site-footer a:hover {
@@ -1871,8 +1872,8 @@ input[type="submit"]:hover {
   background-color: var(--wp--preset--color--theme-color-8);
   color: var(--wp--preset--color--theme-color-3); }
   .site-footer a {
-    color: var(--wp--preset--color--theme-color-3);
-    border-bottom: 1px solid var(--wp--preset--color--theme-color-3); }
+    color: var(--wp--preset--color--theme-color-1);
+    border-bottom: 1px solid var(--wp--preset--color--theme-color-1); }
     .site-footer a:focus, .site-footer a:hover {
       border-bottom: 1px solid transparent; }
 
