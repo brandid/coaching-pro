@@ -358,7 +358,7 @@ input[type="submit"] {
   font-size: var(--wp--custom--typography--font-size--body);
   font-weight: 700;
   padding: 12px 24px;
-  border-radius: var(--wp--custom--global-border-radius);
+  border-radius: var(--wp--custom--global-button-border-radius);
   text-decoration: none;
   white-space: normal;
   width: auto;
@@ -1970,7 +1970,7 @@ input[type="submit"]:hover {
   border-bottom-style: solid !important; }
 
 .wp-block-button .wp-block-button__link {
-  border-radius: var(--wp--custom--global-border-radius); }
+  border-radius: var(--wp--custom--global-button-border-radius); }
 
 /* COVER
 ----------------------------- */

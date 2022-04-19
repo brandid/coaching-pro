@@ -17,7 +17,7 @@
         #edd-purchase-button,
 		.edd-submit,
 		[type=submit].edd-submit {
-            border-radius: $global-border-radius;
+            border-radius: $global-button-border-radius;
             margin-top: 1em;
             padding: calc(.667em + 2px) calc(1.333em + 2px);
             font-size: 100%;

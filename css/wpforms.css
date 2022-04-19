@@ -10,7 +10,7 @@ html {
 .wpforms-container form.wpforms-form button,
 .wpforms-container form.wpforms-form button[type="submit"],
 .wpforms-container form.wpforms-form a.button {
-  border-radius: var(--wp--custom--global-border-radius);
+  border-radius: var(--wp--custom--global-button-border-radius);
   border: none !important; }
 
 .wpforms-container form.wpforms-form .wpforms-field-container input[type="text"],

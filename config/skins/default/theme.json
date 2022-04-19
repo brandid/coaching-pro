@@ -30,7 +30,8 @@
 		},
 		"custom": {
 			"maxWidth": "1280px",
-			"globalBorderRadius": "25px",
+			"globalBorderRadius": "4px",
+			"globalButtonBorderRadius": "24px",
 			"core": {
 				"pullquote": {
 					"margin": "0",

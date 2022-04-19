@@ -16,7 +16,7 @@ html {
   .edd-page #genesis-content #edd-purchase-button,
   .edd-page #genesis-content .edd-submit,
   .edd-page #genesis-content [type=submit].edd-submit {
-    border-radius: var(--wp--custom--global-border-radius);
+    border-radius: var(--wp--custom--global-button-border-radius);
     margin-top: 1em;
     padding: calc(.667em + 2px) calc(1.333em + 2px);
     font-size: 100%;
