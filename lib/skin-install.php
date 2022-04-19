@@ -87,14 +87,75 @@ function coaching_pro_maybe_pre_cleanup() {
 				wp_delete_post( $maybe_post->ID, true );
 			}
 		}
+
+		// Remove extra contact us forms.
+		$maybe_contact_form = get_page_by_path( 'contact-me', OBJECT, array( 'wpforms' ) );
+		if ( null !== $maybe_contact_form ) {
+			wp_delete_post( $maybe_contact_form->ID, true );
+		}
 	}
+
+	if ( function_exists( 'wpforms_encode' ) ) {
+		// Begin WP Forms import. (file: wpforms-lite/src/Admin/Tools/Views/import.php)
+		$forms_to_import = genesis_get_config( 'import/forms/wpforms-form-export.json' );
+		$forms    = json_decode( current( $forms_to_import ), true );
+		
+		// This will get the form ID and store it in an option.
+		foreach ( $forms as $form ) {
+			$title  = ! empty( $form['settings']['form_title'] ) ? $form['settings']['form_title'] : '';
+			$desc   = ! empty( $form['settings']['form_desc'] ) ? $form['settings']['form_desc'] : '';
+			$new_id = wp_insert_post(
+				[
+					'post_title'   => $title,
+					'post_status'  => 'publish',
+					'post_type'    => 'wpforms',
+					'post_excerpt' => $desc,
+				]
+			);
+
+			if ( $new_id ) {
+				$form['id'] = $new_id;
+
+				wp_update_post(
+					[
+						'ID'           => $new_id,
+						'post_content' => wpforms_encode( $form ),
+					]
+				);
+			}
+			update_option( 'coaching-pro-wp-forms-contact-id', $new_id );
+		}
+	}
+
+	
+	
 }
-add_action( 'genesis_onboarding_before_import_content', 'coaching_pro_maybe_pre_cleanup' );
+add_action( 'genesis_onboarding_before_import_content', 'coaching_pro_maybe_pre_cleanup', 1 );
 
 /**
  * Run after importing the content. Clears theme.json cache..
+ *
+ * Also searches contact page for placeholder and replaces it with a form ID.
  */
 function coaching_pro_after_import_content() {
+
+	// Clear theme.json cache.
 	WP_Theme_JSON_Resolver::clean_cached_data();
+
+	// Find the contact page and replace {{form_id}} with actual form id.
+	$maybe_contact_page = get_page_by_path( 'contact-me', OBJECT, array( 'page' ) );
+
+	if ( $maybe_contact_page ) {
+		$page_id      = $maybe_contact_page->ID;
+		$page_content = $maybe_contact_page->post_content;
+
+		// Search post content for placeholder and replace it with created form ID.
+		if ( strstr( $page_content, '{{form_id}}' ) ) {
+			$form_id = absint( get_option( 'coaching-pro-wp-forms-contact-id', 0 ) );
+			$maybe_contact_page->post_content = str_replace( '{{form_id}}', $form_id, $maybe_contact_page->post_content );
+			 wp_update_post( $maybe_contact_page );
+		}
+		
+	}
 }
 add_action( 'genesis_onboarding_after_import_content', 'coaching_pro_after_import_content' );
