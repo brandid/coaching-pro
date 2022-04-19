@@ -1,11 +1,12 @@
+/* Can not use CSS var() syntax here. It does not work at all */
 /* Coaching Pro - Block Editor Styles
 --------------------------------------------- */
 #wpwrap {
   -webkit-font-smoothing: antialiased; }
 
 .editor-styles-wrapper {
-  font-size: clamp(14px, calc(1vw + 1rem), 17px);
-  font-weight: 300;
+  font-size: var(--wp--custom--typography--font-size--body);
+  font-weight: var(--wp--custom--typography--font-weight--body);
   line-height: 1.625;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -14,17 +15,13 @@
   .editor-styles-wrapper ul,
   .editor-styles-wrapper ol,
   .editor-styles-wrapper dl {
-    font-size: clamp(14px, calc(1vw + 1rem), 17px);
-    font-weight: 300;
+    font-size: var(--wp--custom--typography--font-size--body);
+    font-weight: var(--wp--custom--typography--font-weight--body);
     line-height: 1.625; }
 
 /* Regular content width.
 /* 660px + 30px to match paragraph width on front-end and editor.
 --------------------------------------------- */
-.wp-block,
-.wp-block-group__inner-container {
-  max-width: 690px; }
-
 /* Width of "wide" blocks
 /* 1062px + 30px so wide images match width in front-end and editor.
 /* 1120px = default column width of 660px + .alignwide negative margin of 360px
@@ -59,24 +56,24 @@
   padding: 0; }
 
 .editor-styles-wrapper h1 {
-  font-size: clamp(36px, calc(3.5vw + 1rem), 60px);
+  font-size: var(--wp--custom--typography--font-size--h-1);
   line-height: 1.25; }
 
 .editor-styles-wrapper h2 {
-  font-size: clamp(24px, calc(2.8vw + 1rem), 48px);
+  font-size: var(--wp--custom--typography--font-size--h-2);
   line-height: 1.25; }
 
 .editor-styles-wrapper h3 {
-  font-size: clamp(20px, calc(2vw + 1rem), 38px); }
+  font-size: var(--wp--custom--typography--font-size--h-3); }
 
 .editor-styles-wrapper h4 {
-  font-size: clamp(18px, calc(1.75vw + 1rem), 30px); }
+  font-size: var(--wp--custom--typography--font-size--h-4); }
 
 .editor-styles-wrapper h5 {
-  font-size: clamp(17px, calc(1.25vw + 1rem), 24px); }
+  font-size: var(--wp--custom--typography--font-size--h-5); }
 
 .editor-styles-wrapper h6 {
-  font-size: clamp(16px, calc(1vw + 1rem), 20px); }
+  font-size: var(--wp--custom--typography--font-size--h-6); }
 
 .editor-styles-wrapper b,
 .editor-styles-wrapper strong {
@@ -86,7 +83,7 @@
   font-family: monospace; }
 
 .editor-post-title__block .editor-post-title__input {
-  font-size: clamp(36px, calc(3.5vw + 1rem), 60px);
+  font-size: var(--wp--custom--typography--font-size--h-1);
   line-height: 1.25;
   margin: 0 0 20px; }
 
@@ -100,7 +97,7 @@
 /* BUTTONS
 --------------------------------------------- */
 .wp-block-button .wp-block-button__link {
-  border-radius: 4px; }
+  border-radius: var(--wp--custom--global-border-radius); }
 
 /* TABLES
 --------------------------------------------- */
@@ -132,12 +129,19 @@
 
 /* PULL QUOTES
 --------------------------------------------- */
-.wp-block-pullquote, .wp-block-pullquote.is-style-solid-color.has-background {
+.wp-block-pullquote, .wp-block-pullquote.is-style-solid-color.has-background,
+.wp-block-quote,
+.wp-block-quote.is-style-solid-color.has-background {
   padding: 10px 20px; }
-  .wp-block-pullquote blockquote, .wp-block-pullquote.is-style-solid-color.has-background blockquote {
+  .wp-block-pullquote blockquote, .wp-block-pullquote.is-style-solid-color.has-background blockquote,
+  .wp-block-quote blockquote,
+  .wp-block-quote.is-style-solid-color.has-background blockquote {
     max-width: 100%;
-    margin: 40px; }
-    .wp-block-pullquote blockquote::before, .wp-block-pullquote.is-style-solid-color.has-background blockquote::before {
+    margin: 0;
+    padding: 0; }
+    .wp-block-pullquote blockquote::before, .wp-block-pullquote.is-style-solid-color.has-background blockquote::before,
+    .wp-block-quote blockquote::before,
+    .wp-block-quote.is-style-solid-color.has-background blockquote::before {
       content: "\201C";
       display: block;
       height: 20px;
@@ -149,13 +153,24 @@
     .wp-block-pullquote blockquote p,
     .wp-block-pullquote blockquote .wp-block-pullquote__citation, .wp-block-pullquote.is-style-solid-color.has-background blockquote::before,
     .wp-block-pullquote.is-style-solid-color.has-background blockquote p,
-    .wp-block-pullquote.is-style-solid-color.has-background blockquote .wp-block-pullquote__citation {
+    .wp-block-pullquote.is-style-solid-color.has-background blockquote .wp-block-pullquote__citation,
+    .wp-block-quote blockquote::before,
+    .wp-block-quote blockquote p,
+    .wp-block-quote blockquote .wp-block-pullquote__citation,
+    .wp-block-quote.is-style-solid-color.has-background blockquote::before,
+    .wp-block-quote.is-style-solid-color.has-background blockquote p,
+    .wp-block-quote.is-style-solid-color.has-background blockquote .wp-block-pullquote__citation {
+      color: inherit;
       text-align: center;
       font-style: normal; }
-    .wp-block-pullquote blockquote > div > p, .wp-block-pullquote.is-style-solid-color.has-background blockquote > div > p {
+    .wp-block-pullquote blockquote > div > p, .wp-block-pullquote.is-style-solid-color.has-background blockquote > div > p,
+    .wp-block-quote blockquote > div > p,
+    .wp-block-quote.is-style-solid-color.has-background blockquote > div > p {
       line-height: 1.25;
       margin-bottom: 28px; }
-    .wp-block-pullquote blockquote > div > .wp-block-pullquote__citation, .wp-block-pullquote.is-style-solid-color.has-background blockquote > div > .wp-block-pullquote__citation {
+    .wp-block-pullquote blockquote > div > .wp-block-pullquote__citation, .wp-block-pullquote.is-style-solid-color.has-background blockquote > div > .wp-block-pullquote__citation,
+    .wp-block-quote blockquote > div > .wp-block-pullquote__citation,
+    .wp-block-quote.is-style-solid-color.has-background blockquote > div > .wp-block-pullquote__citation {
       display: block;
       width: 100%;
       font-size: 15px;

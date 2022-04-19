@@ -12,7 +12,7 @@ function coachingpro_custom_woocommerce_css() {
 
 	wp_enqueue_style( genesis_get_theme_handle() . '-woocommerce-custom-styles', get_stylesheet_directory_uri() . '/css/woocommerce.css', '', CHILD_THEME_VERSION );
 
-	$appearance = genesis_get_config( 'appearance' );
+	$appearance = coaching_pro_get_skin_appearance();
 
 	$text_color1           = get_theme_mod( 'coachpro_theme_textcolor_1_setting', $appearance['default-colors']['textcolor1'] );
 	$links_color           = get_theme_mod( 'coachpro_theme_linkscolor_setting', $appearance['default-colors']['textcolor1'] );

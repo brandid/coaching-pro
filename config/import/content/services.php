@@ -9,20 +9,21 @@
 
 $home_url = get_bloginfo( 'url' );
 
+$skin_slug = coaching_pro_get_active_skin_slug();
+
 // Get default images.
-$coachingpro_services_1 = CHILD_URL . '/config/import/images/demo-services-1.jpg';
-$coachingpro_services_2 = CHILD_URL . '/config/import/images/demo-services-2.jpg';
-$coachingpro_services_3 = CHILD_URL . '/config/import/images/demo-services-3.jpg';
-$coachingpro_services_4 = CHILD_URL . '/config/import/images/demo-services-4.jpg';
-$coachingpro_services_5 = CHILD_URL . '/config/import/images/demo-services-5.jpg';
-$coachingpro_services_6 = CHILD_URL . '/config/import/images/demo-services-6.jpg';
+$coachingpro_services_1 = CHILD_URL . '/config/skins/' . $skin_slug . '/images/demo-services-1.jpg';
+$coachingpro_services_2 = CHILD_URL . '/config/skins/' . $skin_slug . '/images/demo-services-2.jpg';
+$coachingpro_services_3 = CHILD_URL . '/config/skins/' . $skin_slug . '/images/demo-services-3.jpg';
+$coachingpro_services_4 = CHILD_URL . '/config/skins/' . $skin_slug . '/images/demo-services-4.jpg';
+$coachingpro_services_5 = CHILD_URL . '/config/skins/' . $skin_slug . '/images/demo-services-5.jpg';
+$coachingpro_services_6 = CHILD_URL . '/config/skins/' . $skin_slug . '/images/demo-services-6.jpg';
 
 // Output page content.
 return <<<CONTENT
 <!-- wp:genesis-blocks/gb-columns {"columns":1,"layout":"one-column","align":"full","padding":40,"paddingTop":80,"paddingRight":40,"paddingBottom":80,"paddingLeft":40,"backgroundColor":"white","columnMaxWidth":1000} -->
 <div class="wp-block-genesis-blocks-gb-columns gb-layout-columns-1 one-column has-white-background-color gb-columns-center alignfull" style="padding-top:80px;padding-right:40px;padding-bottom:80px;padding-left:40px"><div class="gb-layout-column-wrap gb-block-layout-column-gap-2 gb-is-responsive-column" style="max-width:1000px"><!-- wp:genesis-blocks/gb-column {"textAlign":"center"} -->
 <div class="wp-block-genesis-blocks-gb-column gb-block-layout-column"><div class="gb-block-layout-column-inner" style="text-align:center"><!-- wp:heading {"style":{"typography":{"fontSize":"52px","fontWeight":"500"}},"textColor":"textcolortwo"} -->
-<h2 class="has-textcolortwo-color has-text-color" style="font-size:52px;font-weight:500">Services</h2>
 <!-- /wp:heading -->
 
 <!-- wp:heading {"level":3,"textColor":"colortwo","fontSize":"large"} -->

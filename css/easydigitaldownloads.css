@@ -4,6 +4,7 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
+/* Can not use CSS var() syntax here. It does not work at all */
 /* EASY DIGITAL DOWNLOADS STYLES
 ----------------------------------------------------------------------------- */
 /* GLOBAL STYLES
@@ -15,7 +16,7 @@ html {
   .edd-page #genesis-content #edd-purchase-button,
   .edd-page #genesis-content .edd-submit,
   .edd-page #genesis-content [type=submit].edd-submit {
-    border-radius: 4px;
+    border-radius: var(--wp--custom--global-button-border-radius);
     margin-top: 1em;
     padding: calc(.667em + 2px) calc(1.333em + 2px);
     font-size: 100%;
@@ -47,7 +48,7 @@ html {
       padding: 0;
       clear: both;
       border: 1px solid #ccc;
-      border-radius: 4px;
+      border-radius: var(--wp--custom--global-border-radius);
       overflow: hidden; }
       .edd-page #genesis-content .edd-pagination-wrap .edd-pagination .page-numbers {
         display: inline-block;
@@ -88,7 +89,7 @@ html {
         display: inline-block; }
         .edd-page.edd-archive #genesis-content article.entry .edd-products-wrap .edd-product .product-image a img {
           display: block;
-          border-radius: 4px; }
+          border-radius: var(--wp--custom--global-border-radius); }
     .edd-page.edd-archive #genesis-content article.entry .edd-products-wrap .edd-product a {
       display: inline-block;
       border-bottom: 0; }
@@ -164,7 +165,7 @@ html {
 /* LOGIN FORM
 --------------------------------------- */
 #edd_login_form {
-  background-color: #f5f5f5;
+  background-color: var(--wp--preset--color--soft-white);
   margin-bottom: 40px;
   padding: 30px;
   border: 1px solid #ccc;
@@ -175,7 +176,7 @@ html {
   #edd_login_form input[type="password"] {
     border: 1px solid #ccc; }
   #edd_login_form input[type="submit"] {
-    border-radius: 4px;
+    border-radius: var(--wp--custom--global-border-radius);
     margin-top: 1em;
     padding: calc(.667em + 2px) calc(1.333em + 2px);
     font-size: 100%;

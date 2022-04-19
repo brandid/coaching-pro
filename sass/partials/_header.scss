@@ -169,8 +169,13 @@ body {
     padding: 0;
 }
 
+.site-container p.site-title {
+    font-family: var( --wp--preset--font-family--coaching-pro-heading-font );
+    margin-bottom: 8px;
+}
+
 .site-title {
-    font-size: $h4-font-size;
+    font-size: $h3-font-size;
     font-weight: 700;
     line-height: 1.2;
     a,
@@ -202,7 +207,7 @@ body {
 }
 
 .site-description {
-    font-size: 0.8em;
+    font-size: var( --wp--custom--typography--font-size--site-description );
     font-weight: 400;
     line-height: 1.5;
     margin-bottom: 0;

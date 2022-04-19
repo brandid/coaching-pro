@@ -7,6 +7,12 @@
  * @package Coaching Pro Theme
  */
 
+// Helper skin functions. Needs to be loaded before theme.json and skin setup.
+require_once get_stylesheet_directory() . '/lib/skins-setup.php';
+
+ // Theme.json helper. Conditionally load theme.json. Must be run BEFORE genesis init.
+require_once get_stylesheet_directory() . '/lib/theme-json-init.php';
+
 // Start the engine.
 require_once get_template_directory() . '/lib/init.php';
 
@@ -41,6 +47,10 @@ function coaching_pro_localization_setup() {
 
 // Load Theme Setup and Configuration.
 require_once CHILD_THEME_DIR . '/lib/theme-setup.php';
+
+// Load Theme Skin installer and cleanup.
+// Uses genesis_onboarding_before_import_content to clean up and save everything when a new skin is chosen.
+require_once CHILD_THEME_DIR . '/lib/skin-install.php';
 
 // Import custom separator control.
 require_once CHILD_THEME_DIR . '/lib/class-separator-control.php';

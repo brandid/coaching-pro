@@ -7,14 +7,14 @@
 
 // Define the default color palette.
 $coachpro_default_colors = array(
-	'color1'     => '#56585d',
-	'color2'     => '#d46a43',
-	'color3'     => '#6e6872',
-	'color4'     => '#5c4a28',
-	'textcolor1' => '#939393',
-	'textcolor2' => '#8a8a8a',
+	'color1'     => '#334e41',
+	'color2'     => '#578157',
+	'color3'     => '#a3b18a',
+	'color4'     => '#d46a43',
+	'textcolor1' => '#827467',
+	'textcolor2' => '#564f49',
 	'bgcolor1'   => '#f0efee',
-	'bgcolor2'   => '#f8f8f8',
+	'bgcolor2'   => '#dad7cd',
 	'white'      => '#ffffff',
 	'black'      => '#000000',
 );
@@ -31,14 +31,14 @@ $coachpro_bgcolor_2   = get_theme_mod( 'coachpro_theme_bgcolor_2_setting', $coac
 
 // Define the default fonts.
 $coachpro_default_fonts = array(
-	'h1'      => 'Montserrat',
-	'h2'      => 'Montserrat',
-	'h3'      => 'Caveat',
-	'h4'      => 'Montserrat',
-	'h5'      => 'Montserrat',
-	'h6'      => 'Montserrat',
-	'navmenu' => 'Montserrat',
-	'body'    => 'Montserrat',
+	'h1'      => 'Playfair Display',
+	'h2'      => 'Playfair Display',
+	'h3'      => 'Shadows Into Light',
+	'h4'      => 'Playfair Display',
+	'h5'      => 'Playfair Display',
+	'h6'      => 'Playfair Display',
+	'navmenu' => 'Raleway',
+	'body'    => 'Raleway',
 );
 
 // Define the Customizer fonts - assign the default font if it is not changed in the Customizer.
@@ -157,5 +157,5 @@ $appearance = array(
 		),
 	),
 );
-
+// return array();
 return $appearance;

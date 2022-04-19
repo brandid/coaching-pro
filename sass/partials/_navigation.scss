@@ -24,7 +24,7 @@
     }
     .menu-item {
       // font-size: 15px;
-      font-size: clamp(14px, 2.5vw, 16px);
+      font-size: var( --wp--custom--typography--font-size--menu-item );
       font-weight: 400;
       line-height: 1;
       display: inline-block;
@@ -332,7 +332,7 @@
     ul#menu-primary-navigation {
 		li {
 			a {
-				font-size: clamp(14px, 2.5vw, 16px);
+				font-size: var( --wp--custom--typography--font-size--menu-item );
 			}
         }
     }

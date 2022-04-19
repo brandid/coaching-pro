@@ -16,7 +16,7 @@ function coaching_pro_fonts_css_blockeditor() {
 	// Enqueue the custom Block Editor styles compiled from the SASS files. Assign a handle to attach the inline styles.
 	wp_enqueue_style( 'coaching-pro-block-editor-styles', get_theme_file_uri( '/css/block-editor-styles.css' ), '', CHILD_THEME_VERSION );
 
-	$appearance = genesis_get_config( 'appearance' );
+	$appearance = coaching_pro_get_skin_appearance();
 
 	$editor_fonts = $appearance['editor-fonts'];
 

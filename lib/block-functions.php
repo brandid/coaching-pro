@@ -29,7 +29,7 @@ add_action( 'enqueue_block_editor_assets', 'coachingpro_enqueue_googlefonts' );
 function blockeditor_get_fonts_list() {
 
 	// Get the appearance settings array.
-	$appearance = genesis_get_config( 'appearance' );
+	$appearance = coaching_pro_get_skin_appearance();
 
 	// Get the list of fonts from the appearance array.
 	$editor_fonts = $appearance['editor-fonts'];

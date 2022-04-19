@@ -98,7 +98,7 @@ gulp.task('zip', async function() {
         'css/*',
         'images/*',
         'includes/**/*',
-        'js/*',
+        'js/**/*',
         'languages/*',
         'lib/*',
         'xml/*',

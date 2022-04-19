@@ -46,7 +46,7 @@
 		}
 	}
 	.wp-block-button__link {
-		border-radius: $global-border-radius;
+		border-radius: $global-button-border-radius;
 	}
 }
 
@@ -142,6 +142,10 @@
 /* PULLQUOTE
 ----------------------------- */
 .wp-block-pullquote {
+	blockquote {
+		margin: inherit;
+		padding: inherit;
+	}
 	&,
 	&.is-style-solid-color.has-background {
 		padding: 10px 20px;
@@ -215,6 +219,18 @@
 	}
 }
 
+/* Nutrition Custom block styles */
+.coaching-pro-skin-nutrition {
+	/* One-Column blocks. */
+	.one-column {
+		.wp-block-genesis-blocks-gb-columns.gb-layout-columns-3 {
+			.wp-block-image {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
 /* Blog post grid. */
 .gb-block-post-grid {
 	.gb-post-grid-items.is-grid {
@@ -242,6 +258,36 @@
 					text-decoration: underline;
 				}
 			}
+		}
+	}
+}
+
+/* Widget Search */
+.widget_search {
+	.wp-block-search {
+		label.wp-block-search__label {
+			color: var( --wp--custom--widgets--search--label--color );
+			font-weight: var( --wp--custom--widgets--search--label--font-weight );
+		}
+	}
+}
+.widget_block {
+	margin-bottom: 2em;
+	.widget-wrap {
+		h2 {
+			font-size: var( --wp--custom--widgets--headings--h-2--font-size );
+			line-height: 1.3;
+			margin: 10px 0 15px 0;
+		}
+		h3 {
+			font-size: var( --wp--custom--widgets--headings--h-3--font-size );
+			line-height: 1.2;
+		}
+		ul {
+			margin-top: 15px;
+		}
+		li {
+			line-height: 1.2;
 		}
 	}
 }

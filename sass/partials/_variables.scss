@@ -1,21 +1,21 @@
 // Colors
 //------------------------------------------------------------------------------
-$white: #fff;
-$black: #000;
-$soft-white: #f5f5f5;
-$soft-black: #666;
-$grey: #a5abab;
+$white: var( --wp--preset--color--white );
+$black: var( --wp--preset--color--black );
+$soft-white: var( --wp--preset--color--soft-white );
+$soft-black: var( --wp--preset--color--soft-black );
+$grey: var( --wp--preset--color--grey );
 
 // Theme Default Colors
 // -------------------------------------
-$theme-color1: #56585d;
-$theme-color2: #d46a43;
-$theme-color3: #6e6872;
-$theme-color4: #5c4a28;
-$theme-color5: #939393;
-$theme-color6: #8a8a8a;
-$theme-color7: #f0efee;
-$theme-color8: #f8f8f8;
+$theme-color1: var( --wp--preset--color--theme-color-1 );
+$theme-color2: var( --wp--preset--color--theme-color-2 );
+$theme-color3: var( --wp--preset--color--theme-color-3 );
+$theme-color4: var( --wp--preset--color--theme-color-4 );
+$theme-color5: var( --wp--preset--color--theme-color-5 );
+$theme-color6: var( --wp--preset--color--theme-color-6 );
+$theme-color7: var( --wp--preset--color--theme-color-7 );
+$theme-color8: var( --wp--preset--color--theme-color-8 );
 
 // Background colors
 //-------------------------------------
@@ -23,7 +23,7 @@ $background-color: $white;
 
 // Menu items
 //-------------------------------------
-$sub-menu-color: $soft-black;
+$sub-menu-color: $theme-color4;
 $sub-menu-background: $theme-color7;
 
 // Base colors for text and links
@@ -32,10 +32,12 @@ $base-text-color: $soft-black;
 
 // Border Radius
 //-------------------------------------
-$global-border-radius: 4px;
+$global-border-radius: var( --wp--custom--global-border-radius );
+$global-button-border-radius: var( --wp--custom--global-button-border-radius );
 
 // Global Screen Sizes - was 1440px
 //------------------------------------------------------------------------------
+/* Can not use CSS var() syntax here. It does not work at all */
 $small1-screen: 320px;
 $small-screen-600: 600px;
 $small2-screen: 768px;
@@ -72,20 +74,20 @@ $mono: Courier, monospace;
 
 // Base Typography
 //------------------------------------------------------------------------------
-$html-font-size: 62.5%;
+$html-font-size: var( --wp--custom--typography--font-size--html );
 
-$body-font-weight: 300;
-$body-line-height: 1.6;
+$body-font-weight: var( --wp--custom--typography--font-weight--body );
+$body-line-height: var( --wp--custom--typography--line-height--body );
 
-$heading-line-height: 1.5;
-$heading-font-weight: 300;
+$heading-line-height: var( --wp--custom--typography--line-height--heading );
+$heading-font-weight: var( --wp--custom--typography--font-weight--heading );
 
 // Fluid Typography - responsive font sizes
 //------------------------------------------------------------------------------
-$body-font-size: clamp( 14px, calc(1vw + 1rem), 17px );
-$h1-font-size: clamp( 36px, calc(3.5vw + 1rem), 60px );
-$h2-font-size: clamp( 24px, calc(2.8vw + 1rem), 48px );
-$h3-font-size: clamp( 20px, calc(2vw + 1rem), 38px );
-$h4-font-size: clamp( 18px, calc(1.75vw + 1rem), 30px );
-$h5-font-size: clamp( 17px, calc(1.25vw + 1rem), 24px );
-$h6-font-size: clamp( 16px, calc(1vw + 1rem), 20px );
+$body-font-size: var( --wp--custom--typography--font-size--body );
+$h1-font-size: var( --wp--custom--typography--font-size--h-1 );
+$h2-font-size: var( --wp--custom--typography--font-size--h-2 );
+$h3-font-size: var( --wp--custom--typography--font-size--h-3 );
+$h4-font-size: var( --wp--custom--typography--font-size--h-4 );
+$h5-font-size: var( --wp--custom--typography--font-size--h-5 );
+$h6-font-size: var( --wp--custom--typography--font-size--h-6 );

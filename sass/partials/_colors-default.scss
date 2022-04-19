@@ -10,7 +10,7 @@
 .transparent-header .site-header:not(.sticky),
 .transparent-header .site-header.sticky.scrolled,
 body:not(.transparent-header) .site-header {
-    background-color: $theme-color8 !important;
+    background-color: var( --wp--custom--colors--header--background ) !important;
 }
 
 /* ## Default Menu Colors
@@ -200,8 +200,8 @@ input[type="submit"]:hover {
     background-color: $theme-color8;
     color: $theme-color3;
     a {
-        color: $theme-color3;
-        border-bottom: 1px solid $theme-color3;
+        color: $theme-color1;
+        border-bottom: 1px solid $theme-color1;
         &:focus,
         &:hover {
             // color: $grey;

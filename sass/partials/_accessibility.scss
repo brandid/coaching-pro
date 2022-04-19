@@ -55,6 +55,6 @@
 
 // Display outline on focus
 :focus {
-    color: lighten($black, 11);
-    outline: lighten($black, 63) dotted thin;
+    color: $soft-black;
+    outline: $grey dotted thin;
 }

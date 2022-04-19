@@ -6,7 +6,7 @@
  */
 
 // Set the Appearance settings defaults.
-$appearance = genesis_get_config( 'appearance' );
+$appearance = coaching_pro_get_skin_appearance();
 
 return array(
 	'align-wide'                      => '',

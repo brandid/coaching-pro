@@ -9,10 +9,9 @@
  * Register settings and controls with the Customizer.
  */
 function coaching_pro_color_settings() {
-
 	global $wp_customize;
 
-	$appearance = genesis_get_config( 'appearance' );
+	$appearance = coaching_pro_get_skin_appearance();
 
 	// Add 'Color Palette' Section.
 	$wp_customize->add_section(
@@ -381,7 +380,7 @@ add_action( 'customize_register', 'coaching_pro_color_settings' );
  */
 function coaching_pro_color_css() {
 
-	$appearance           = genesis_get_config( 'appearance' );
+	$appearance           = coaching_pro_get_skin_appearance();
 	$editor_color_palette = $appearance['editor-color-palette'];
 
 	$color_one = get_theme_mod( 'coachpro_theme_color_1_setting', $appearance['default-colors']['color1'] );

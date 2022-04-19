@@ -1,0 +1,7 @@
+/* Social Proof Slider styles */
+body .wp-block-socialproofslider .social-proof-slider-wrap.slick-dotted.slick-slider .slick-dots li button[type="button"] {
+    font-size: 0 !important;
+}
+body .wp-block-socialproofslider .social-proof-slider-wrap.slick-dotted.slick-slider .slick-dots li button::before {
+    color: var( --wp--preset--color--theme-color-2 ) !important;
+}
