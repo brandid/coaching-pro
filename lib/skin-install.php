@@ -18,12 +18,12 @@ $appearance = coaching_pro_get_skin_appearance();
 function coaching_pro_maybe_pre_cleanup() {
 	// Retrieve saved options.
 	$customizer_override = get_option( 'coaching_pro_skin_customizer_override' );
-	$content_override    = get_option( 'coaching_pro_skin_customizer_override' );
+	$content_override    = get_option( 'coaching_pro_skin_content_override' );
 	$selected_skin       = get_option( 'coaching_pro_skin_selected' );
 
 	// Now remove the options in case this step fails.
 	delete_option( 'coaching_pro_skin_customizer_override' );
-	delete_option( 'coaching_pro_skin_customizer_override' );
+	delete_option( 'coaching_pro_skin_content_override' );
 
 	$appearance = genesis_get_config( sprintf( 'skins/%s/appearance', $selected_skin ) );
 	if ( 'true' === $customizer_override ) {
