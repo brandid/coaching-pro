@@ -9,21 +9,14 @@
  * Import widgets afer skin installation.
  */
 function coaching_pro_after_import_widgets() {
-	$widgets = genesis_get_config( 'import/content/widgets/footer-sidebar-widgets' );
+	$widgets = genesis_get_config( 'import/content/widgets/sidebar-widgets' );
 
-	// Let's store block content here.
-	$widget_block_content = array();
+	$footer_widget_block_content  = array(); // Let's store footer block content here.
+	$sidebar_widget_block_content = array(); // Let's store sidebar block content here.
 
-	// Let's get existing block widgets and get the last index.
-	$block_widgets       = get_option( 'widget_block', array() );
+	$block_widgets       = array(); // Clear block widgets to prevent memory leaks.
 	$block_widgets_index = 0;
-	foreach ( $block_widgets as $index => $value ) { // We just need the index.
-		if ( is_int( $index ) ) {
-			$block_widgets_index = $index;
-		}
-	}
-
-	$count = $block_widgets_index + 1; // This is to identify the widgets in option `sidebars_widgets`.
+	$count               = $block_widgets_index + 1; // This is to identify the widgets in option `sidebars_widgets`.
 
 	// Let's get the footer widgets.
 	$footer_widgets = $widgets['footer'] ?? false;
@@ -32,22 +25,42 @@ function coaching_pro_after_import_widgets() {
 			$widget_content = $widget['content'] ?? false;
 			if ( $widget_content ) {
 				// Let's store footer widgets here and also in the block widgets.
-				$widget_block_content[ $count ]['content'] = $widget_content; // We'll need this in the next section.
-				$block_widgets[ $count ]['content']        = $widget_content; // This is the variable we'll save for the block widgets.
+				$footer_widget_block_content[ $count ]['content'] = $widget_content; // We'll need this in the next section.
+				$block_widgets[ $count ]['content']               = $widget_content; // This is the variable we'll save for the block widgets.
 				$count++;
 			}
 		}
 	}
 
-	// Now lets get the sidebar widgets and overwrite the `footer-1` widget area.
-	$sidebar_widgets = get_option( 'sidebars_widgets', array() );
-	$footer_one      = array();
-	foreach ( $widget_block_content as $index => $content ) {
-		$footer_one[] = 'block-' . $index;
+	// Let's get the sidebar widgets.
+	$sidebar_widgets = $widgets['sidebar'] ?? false; // this var is overwritten below.
+	if ( $sidebar_widgets ) {
+		foreach ( $sidebar_widgets as $index => $widget ) {
+			$widget_content = $widget['content'] ?? false;
+			if ( $widget_content ) {
+				// Let's store footer widgets here and also in the block widgets.
+				$sidebar_widget_block_content[ $count ]['content'] = $widget_content; // We'll need this in the next section.
+				$block_widgets[ $count ]['content']                = $widget_content; // This is the variable we'll save for the block widgets.
+				$count++;
+			}
+		}
 	}
 
-	// Now overwrite footer one.
+	$sidebar_widgets = get_option( 'sidebars_widgets', array() ); // Get existing widget areas and contents.
+
+	// Now lets overwrite the `footer-1` widget area.
+	$footer_one = array();
+	foreach ( $footer_widget_block_content as $index => $content ) {
+		$footer_one[] = 'block-' . $index;
+	}
 	$sidebar_widgets['footer-1'] = $footer_one;
+
+	// Now lets overwrite the `sidebar` widget area.
+	$sidebar = array();
+	foreach ( $sidebar_widget_block_content as $index => $content ) {
+		$sidebar[] = 'block-' . $index;
+	}
+	$sidebar_widgets['sidebar'] = $sidebar;
 
 	// Now let's save.
 	update_option( 'sidebars_widgets', $sidebar_widgets );
