@@ -6,11 +6,12 @@ $widgets = array();
 
 $newsletter_id = get_option( 'coaching-pro-wp-forms-newsletter-id', 0 );
 $contact_id    = get_option( 'coaching-pro-wp-forms-footer-contact-id', 0 );
+$widget_image_dir = CHILD_URL . '/config/import/content/widgets/images/';
 // Footer widget 1
 ob_start();
 ?>
-<!-- wp:genesis-blocks/gb-columns {"backgroundImgURL":"https://demo.coaching-pro.thebrandid.com/wp-content/uploads/2021/10/NewsletterBkgd.jpg","backgroundDimRatio":50,"focalPoint":{"x":0.5,"y":0.25},"columns":1,"layout":"one-column","align":"full","paddingSync":true,"padding":30,"backgroundColor":"black","columnMaxWidth":800} -->
-<div class="wp-block-genesis-blocks-gb-columns gb-layout-columns-1 one-column gb-has-background-dim gb-has-background-dim-50 gb-background-cover gb-background-no-repeat has-black-background-color gb-columns-center alignfull" style="padding:30px;background-image:url(https://demo.coaching-pro.thebrandid.com/wp-content/uploads/2021/10/NewsletterBkgd.jpg);background-position:50% 25%"><div class="gb-layout-column-wrap gb-block-layout-column-gap-2 gb-is-responsive-column" style="max-width:800px"><!-- wp:genesis-blocks/gb-column {"textColor":"white","textAlign":"center"} -->
+<!-- wp:genesis-blocks/gb-columns {"backgroundImgURL":"<?php echo esc_url( $widget_image_dir . 'NewsletterBkgd.jpeg' ); ?>","backgroundDimRatio":50,"focalPoint":{"x":0.5,"y":0.25},"columns":1,"layout":"one-column","align":"full","paddingSync":true,"padding":30,"backgroundColor":"black","columnMaxWidth":800} -->
+<div class="wp-block-genesis-blocks-gb-columns gb-layout-columns-1 one-column gb-has-background-dim gb-has-background-dim-50 gb-background-cover gb-background-no-repeat has-black-background-color gb-columns-center alignfull" style="padding:30px;background-image:url(<?php echo esc_url( $widget_image_dir . 'NewsletterBkgd.jpeg' ); ?>);background-position:50% 25%"><div class="gb-layout-column-wrap gb-block-layout-column-gap-2 gb-is-responsive-column" style="max-width:800px"><!-- wp:genesis-blocks/gb-column {"textColor":"white","textAlign":"center"} -->
 <div class="wp-block-genesis-blocks-gb-column gb-block-layout-column"><div class="gb-block-layout-column-inner has-white-color" style="text-align:center"><!-- wp:spacer {"height":"120px"} -->
 <div style="height:120px" aria-hidden="true" class="wp-block-spacer"></div>
 <!-- /wp:spacer -->
@@ -114,7 +115,7 @@ ob_start();
 <!-- /wp:paragraph -->
 
 <!-- wp:image {"id":2778,"sizeSlug":"full","linkDestination":"media"} -->
-<figure class="wp-block-image size-full"><a href="https://demo.coaching-pro.thebrandid.com/wp-content/uploads/2021/10/book_cropped.png"><img src="https://demo.coaching-pro.thebrandid.com/wp-content/uploads/2021/10/book_cropped.png" alt="" class="wp-image-2778"/></a></figure>
+<figure class="wp-block-image size-full"><a href="<?php echo esc_url( $widget_image_dir . 'book_cropped.png' ); ?>"><img src="<?php echo esc_url( $widget_image_dir . 'book_cropped.png' ); ?>" alt="" class="wp-image-2778"/></a></figure>
 <!-- /wp:image -->
 
 <!-- wp:buttons -->
@@ -134,25 +135,25 @@ ob_start();
 <!-- wp:genesis-blocks/gb-columns {"columns":4,"layout":"gb-4-col-equal","columnsGap":1} -->
 <div class="wp-block-genesis-blocks-gb-columns gb-layout-columns-4 gb-4-col-equal"><div class="gb-layout-column-wrap gb-block-layout-column-gap-1 gb-is-responsive-column"><!-- wp:genesis-blocks/gb-column {"columnVerticalAlignment":"center"} -->
 <div class="wp-block-genesis-blocks-gb-column gb-block-layout-column gb-is-vertically-aligned-center"><div class="gb-block-layout-column-inner"><!-- wp:image {"align":"center","id":3074,"sizeSlug":"full","linkDestination":"none"} -->
-<div class="wp-block-image"><figure class="aligncenter size-full"><img src="https://demo.coaching-pro.thebrandid.com/wp-content/uploads/2021/11/logo-WomensDay.png" alt="" class="wp-image-3074"/></figure></div>
+<div class="wp-block-image"><figure class="aligncenter size-full"><img src="<?php echo esc_url( $widget_image_dir . 'logo-WomensDay.png' ); ?>" alt="" class="wp-image-3074"/></figure></div>
 <!-- /wp:image --></div></div>
 <!-- /wp:genesis-blocks/gb-column -->
 
 <!-- wp:genesis-blocks/gb-column {"columnVerticalAlignment":"center"} -->
 <div class="wp-block-genesis-blocks-gb-column gb-block-layout-column gb-is-vertically-aligned-center"><div class="gb-block-layout-column-inner"><!-- wp:image {"align":"center","id":3072,"sizeSlug":"full","linkDestination":"none"} -->
-<div class="wp-block-image"><figure class="aligncenter size-full"><img src="https://demo.coaching-pro.thebrandid.com/wp-content/uploads/2021/11/logo-MarthaStewartLiving.png" alt="" class="wp-image-3072"/></figure></div>
+<div class="wp-block-image"><figure class="aligncenter size-full"><img src="<?php echo esc_url( $widget_image_dir . 'logo-MarthaStewartLiving.png' ); ?>" alt="" class="wp-image-3072"/></figure></div>
 <!-- /wp:image --></div></div>
 <!-- /wp:genesis-blocks/gb-column -->
 
 <!-- wp:genesis-blocks/gb-column {"columnVerticalAlignment":"center"} -->
 <div class="wp-block-genesis-blocks-gb-column gb-block-layout-column gb-is-vertically-aligned-center"><div class="gb-block-layout-column-inner"><!-- wp:image {"align":"center","id":3073,"sizeSlug":"full","linkDestination":"none"} -->
-<div class="wp-block-image"><figure class="aligncenter size-full"><img src="https://demo.coaching-pro.thebrandid.com/wp-content/uploads/2021/11/logo-OWN.png" alt="" class="wp-image-3073"/></figure></div>
+<div class="wp-block-image"><figure class="aligncenter size-full"><img src="<?php echo esc_url( $widget_image_dir . 'logo-OWN.png' ); ?>" alt="" class="wp-image-3073"/></figure></div>
 <!-- /wp:image --></div></div>
 <!-- /wp:genesis-blocks/gb-column -->
 
 <!-- wp:genesis-blocks/gb-column {"columnVerticalAlignment":"center"} -->
 <div class="wp-block-genesis-blocks-gb-column gb-block-layout-column gb-is-vertically-aligned-center"><div class="gb-block-layout-column-inner"><!-- wp:image {"align":"center","id":3071,"sizeSlug":"full","linkDestination":"none"} -->
-<div class="wp-block-image"><figure class="aligncenter size-full"><img src="https://demo.coaching-pro.thebrandid.com/wp-content/uploads/2021/11/logo-DrOzShow.png" alt="" class="wp-image-3071"/></figure></div>
+<div class="wp-block-image"><figure class="aligncenter size-full"><img src="<?php echo esc_url( $widget_image_dir . 'logo-DrOzShow.png' ); ?>" alt="" class="wp-image-3071"/></figure></div>
 <!-- /wp:image --></div></div>
 <!-- /wp:genesis-blocks/gb-column --></div></div>
 <!-- /wp:genesis-blocks/gb-columns --></div></div>
@@ -164,13 +165,13 @@ $widgets['sidebar'][]['content'] = ob_get_clean();
 // Sidebar widget 3.
 ob_start();
 ?>
-<!-- wp:cover {"url":"https://demo.coaching-pro.thebrandid.com/wp-content/uploads/2021/11/kobu-agency-7okkFhxrxNw-unsplash.jpg","id":3015,"dimRatio":50,"focalPoint":{"x":"0.50","y":"0.25"},"minHeight":300,"isDark":false,"className":"is-style-roundedcorners"} -->
-<div class="wp-block-cover is-light is-style-roundedcorners" style="min-height:300px"><span aria-hidden="true" class="wp-block-cover__gradient-background has-background-dim"></span><img class="wp-block-cover__image-background wp-image-3015" alt="" src="https://demo.coaching-pro.thebrandid.com/wp-content/uploads/2021/11/kobu-agency-7okkFhxrxNw-unsplash.jpg" style="object-position:50% 25%" data-object-fit="cover" data-object-position="50% 25%"/><div class="wp-block-cover__inner-container"><!-- wp:heading {"textAlign":"center","style":{"typography":{"fontSize":"1.5em"}}} -->
-<h2 class="has-text-align-center" style="font-size:1.5em"><strong>Purchase the theme</strong></h2>
+<!-- wp:cover {"url":"<?php echo esc_url( $widget_image_dir . 'kobu-agency-7okkFhxrxNw-unsplash.jpeg' ); ?>","id":3015,"dimRatio":50,"focalPoint":{"x":"0.50","y":"0.25"},"minHeight":300,"isDark":false,"className":"is-style-roundedcorners"} -->
+<div class="wp-block-cover is-light is-style-roundedcorners" style="min-height:300px"><span aria-hidden="true" class="wp-block-cover__gradient-background has-background-dim"></span><img class="wp-block-cover__image-background wp-image-3015" alt="" src="<?php echo esc_url( $widget_image_dir . 'kobu-agency-7okkFhxrxNw-unsplash.jpeg' ); ?>" style="object-position:50% 25%" data-object-fit="cover" data-object-position="50% 25%"/><div class="wp-block-cover__inner-container"><!-- wp:heading {"textAlign":"center","style":{"typography":{"fontSize":"1.5em"}}} -->
+<h2 class="has-text-align-center has-white-color" style="font-size:1.5em"><strong>Purchase the theme</strong></h2>
 <!-- /wp:heading -->
 
 <!-- wp:heading {"textAlign":"center","level":3} -->
-<h3 class="has-text-align-center">Start your adventure today</h3>
+<h3 class="has-text-align-center has-white-color">Start your adventure today</h3>
 <!-- /wp:heading -->
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center","orientation":"horizontal"}} -->
