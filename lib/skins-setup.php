@@ -67,3 +67,43 @@ function coaching_pro_add_skin_body_class( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'coaching_pro_add_skin_body_class' );
+
+/**
+ * Import a WP Form by passing it the form array from 
+ *
+ * @param string $form_json Form JSON to import.
+ *
+ * @return int Imported form ID.
+ */
+function coaching_pro_import_wpform( string $form_json ) {
+	if ( function_exists( 'wpforms_encode' ) ) {
+		$forms    = json_decode( current( $forms_to_import ), true );
+		
+		// Read in the form data and add it to the current WP Forms post type.
+		foreach ( $forms as $form ) {
+			$title  = ! empty( $form['settings']['form_title'] ) ? $form['settings']['form_title'] : '';
+			$desc   = ! empty( $form['settings']['form_desc'] ) ? $form['settings']['form_desc'] : '';
+			$new_id = wp_insert_post(
+				[
+					'post_title'   => $title,
+					'post_status'  => 'publish',
+					'post_type'    => 'wpforms',
+					'post_excerpt' => $desc,
+				]
+			);
+
+			if ( $new_id ) {
+				$form['id'] = $new_id;
+
+				wp_update_post(
+					[
+						'ID'           => $new_id,
+						'post_content' => wpforms_encode( $form ),
+					]
+				);
+			}
+			return $new_id;
+		}
+		return 0;
+	}
+}

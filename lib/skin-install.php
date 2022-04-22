@@ -88,43 +88,40 @@ function coaching_pro_maybe_pre_cleanup() {
 			}
 		}
 
-		// Remove extra contact us forms.
+		// Remove extra imported forms.
 		$maybe_contact_form = get_page_by_path( 'contact-me', OBJECT, array( 'wpforms' ) );
 		if ( null !== $maybe_contact_form ) {
 			wp_delete_post( $maybe_contact_form->ID, true );
 		}
+
+		$maybe_footer_contact_form = get_page_by_path( 'footer-contact-form', OBJECT, array( 'wpforms' ) );
+		if ( null !== $maybe_footer_contact_form ) {
+			wp_delete_post( $maybe_footer_contact_form->ID, true );
+		}
+
+		$maybe_newsletter_form = get_page_by_path( 'newsletter-signup-form', OBJECT, array( 'wpforms' ) );
+		if ( null !== $maybe_newsletter_form ) {
+			wp_delete_post( $maybe_newsletter_form->ID, true );
+		}
+
 	}
 
+	// Begin import of forms.
 	if ( function_exists( 'wpforms_encode' ) ) {
-		// Begin WP Forms import. (file: wpforms-lite/src/Admin/Tools/Views/import.php)
-		$forms_to_import = genesis_get_config( 'import/forms/wpforms-contact-form-export.json' );
-		$forms    = json_decode( current( $forms_to_import ), true );
-		
-		// This will get the form ID and store it in an option.
-		foreach ( $forms as $form ) {
-			$title  = ! empty( $form['settings']['form_title'] ) ? $form['settings']['form_title'] : '';
-			$desc   = ! empty( $form['settings']['form_desc'] ) ? $form['settings']['form_desc'] : '';
-			$new_id = wp_insert_post(
-				[
-					'post_title'   => $title,
-					'post_status'  => 'publish',
-					'post_type'    => 'wpforms',
-					'post_excerpt' => $desc,
-				]
-			);
+		// Begin WP Forms import. (ref file: wpforms-lite/src/Admin/Tools/Views/import.php)
 
-			if ( $new_id ) {
-				$form['id'] = $new_id;
+		// Import the contact form.
+		$contact_form_to_import = genesis_get_config( 'import/forms/wpforms-contact-form-export.json' );
+		$contact_form_id = coaching_pro_import_wpform( $contact_form_to_import );
+		update_option( 'coaching-pro-wp-forms-contact-id', $contact_form_id ); // This ID option is used for search/replace on the contact page content.
 
-				wp_update_post(
-					[
-						'ID'           => $new_id,
-						'post_content' => wpforms_encode( $form ),
-					]
-				);
-			}
-			update_option( 'coaching-pro-wp-forms-contact-id', $new_id );
-		}
+		// Import the footer newsletter form.
+		$newsletter_form_to_import = genesis_get_config( 'import/forms/wpforms-newsletter-form-export.json' );
+		coaching_pro_import_wpform( $newsletter_form_to_import );
+
+		// Import the footer contact form.
+		$footer_contact_form_to_import = genesis_get_config( 'import/forms/wpforms-footer-contact-form-export.json' );
+		coaching_pro_import_wpform( $footer_contact_form_to_import );
 	}
 
 	
