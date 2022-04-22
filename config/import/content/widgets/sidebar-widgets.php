@@ -201,7 +201,7 @@ ob_start();
 <!-- /wp:heading -->
 
 <!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontSize":"1.5em"}},"textColor":"colortwo"} -->
-<h3 class="has-text-align-center has-colortwo-color has-text-color" style="font-size:1.5em">Articles, media, research and more</h3>
+<h3 class="has-text-align-center has-theme-color-4-color has-text-color" style="font-size:1.5em">Articles, media, research and more</h3>
 <!-- /wp:heading -->
 
 <!-- wp:spacer {"height":"30px"} -->
