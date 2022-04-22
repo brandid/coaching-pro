@@ -97,7 +97,7 @@ function coaching_pro_maybe_pre_cleanup() {
 
 	if ( function_exists( 'wpforms_encode' ) ) {
 		// Begin WP Forms import. (file: wpforms-lite/src/Admin/Tools/Views/import.php)
-		$forms_to_import = genesis_get_config( 'import/forms/wpforms-form-export.json' );
+		$forms_to_import = genesis_get_config( 'import/forms/wpforms-contact-form-export.json' );
 		$forms    = json_decode( current( $forms_to_import ), true );
 		
 		// This will get the form ID and store it in an option.
