@@ -4,6 +4,8 @@
  */
 $widgets = array();
 
+$newsletter_id = get_option( 'coaching-pro-wp-forms-newsletter-id', 0 );
+$contact_id    = get_option( 'coaching-pro-wp-forms-footer-contact-id', 0 );
 // Footer widget 1
 ob_start();
 ?>
@@ -21,7 +23,7 @@ ob_start();
 <h3 class="has-bgcolorone-color has-text-color has-large-font-size" id="and-get-our-free-e-book-instantly">And get our free e-book instantly</h3>
 <!-- /wp:heading -->
 
-<!-- wp:wpforms/form-selector {"formId":"2921"} /-->
+<!-- wp:wpforms/form-selector {"formId":"<?php echo absint( $newsletter_id ); ?>"} /-->
 
 <!-- wp:spacer {"height":"120px"} -->
 <div style="height:120px" aria-hidden="true" class="wp-block-spacer"></div>
@@ -78,13 +80,13 @@ ob_start();
 <h3 class="has-colortwo-color has-text-color" id="a-quick-way-to-reach-you">A quick way to reach you</h3>
 <!-- /wp:heading -->
 
-<!-- wp:wpforms/form-selector {"formId":"2919"} /--></div></div>
+<!-- wp:wpforms/form-selector {"formId":"<?php echo absint( $contact_id ); ?>"} /--></div></div>
 <!-- /wp:genesis-blocks/gb-column --></div></div>
 <!-- /wp:genesis-blocks/gb-columns --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
 <?php
-$widgets['footer'][]['content']  = ob_get_clean();
+$widgets['footer'][]['content'] = ob_get_clean();
 
 // Now return.
 return $widgets;

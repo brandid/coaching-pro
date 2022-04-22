@@ -11,9 +11,7 @@ $appearance = coaching_pro_get_skin_appearance();
 /**
  * Updates settings *before* content is imported from the Skin switcher (found in WPADMIN->Genesis->Child Theme Settings).
  *
- * 
  * Filter: genesis_onboarding_before_import_content
- * 
  */
 function coaching_pro_maybe_pre_cleanup() {
 	// Retrieve saved options.
@@ -78,10 +76,10 @@ function coaching_pro_maybe_pre_cleanup() {
 		}
 
 		// Now let's try to delete by slug.
-		$config = genesis_get_config( 'onboarding-shared' );
+		$config  = genesis_get_config( 'onboarding-shared' );
 		$content = $config['content'] ?? array();
 		foreach ( $content as $content_item ) {
-			$slug = sanitize_title( $content_item['post_title'] );
+			$slug       = sanitize_title( $content_item['post_title'] );
 			$maybe_post = get_page_by_path( $slug, OBJECT, array( 'post', 'page', 'socialproofslider' ) );
 			if ( null !== $maybe_post ) {
 				wp_delete_post( $maybe_post->ID, true );
@@ -103,7 +101,6 @@ function coaching_pro_maybe_pre_cleanup() {
 		if ( null !== $maybe_newsletter_form ) {
 			wp_delete_post( $maybe_newsletter_form->ID, true );
 		}
-
 	}
 
 	// Begin import of forms.
@@ -112,20 +109,20 @@ function coaching_pro_maybe_pre_cleanup() {
 
 		// Import the contact form.
 		$contact_form_to_import = genesis_get_config( 'import/forms/wpforms-contact-form-export.json' );
-		$contact_form_id = coaching_pro_import_wpform( $contact_form_to_import );
+		$contact_form_id        = coaching_pro_import_wpform( $contact_form_to_import );
 		update_option( 'coaching-pro-wp-forms-contact-id', $contact_form_id ); // This ID option is used for search/replace on the contact page content.
 
 		// Import the footer newsletter form.
 		$newsletter_form_to_import = genesis_get_config( 'import/forms/wpforms-newsletter-form-export.json' );
-		coaching_pro_import_wpform( $newsletter_form_to_import );
+		$newsletter_form_id        = coaching_pro_import_wpform( $newsletter_form_to_import );
+		update_option( 'coaching-pro-wp-forms-newsletter-id', $newsletter_form_id );
 
 		// Import the footer contact form.
 		$footer_contact_form_to_import = genesis_get_config( 'import/forms/wpforms-footer-contact-form-export.json' );
-		coaching_pro_import_wpform( $footer_contact_form_to_import );
+		$footer_contact_form_id        = coaching_pro_import_wpform( $footer_contact_form_to_import );
+		update_option( 'coaching-pro-wp-forms-footer-contact-id', $footer_contact_form_id );
 	}
 
-	
-	
 }
 add_action( 'genesis_onboarding_before_import_content', 'coaching_pro_maybe_pre_cleanup', 1 );
 
@@ -148,11 +145,10 @@ function coaching_pro_after_import_content() {
 
 		// Search post content for placeholder and replace it with created form ID.
 		if ( strstr( $page_content, '{{form_id}}' ) ) {
-			$form_id = absint( get_option( 'coaching-pro-wp-forms-contact-id', 0 ) );
+			$form_id                          = absint( get_option( 'coaching-pro-wp-forms-contact-id', 0 ) );
 			$maybe_contact_page->post_content = str_replace( '{{form_id}}', $form_id, $maybe_contact_page->post_content );
 			 wp_update_post( $maybe_contact_page );
 		}
-		
 	}
 }
 add_action( 'genesis_onboarding_after_import_content', 'coaching_pro_after_import_content' );
