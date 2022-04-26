@@ -52,6 +52,10 @@ require_once CHILD_THEME_DIR . '/lib/theme-setup.php';
 // Uses genesis_onboarding_before_import_content to clean up and save everything when a new skin is chosen.
 require_once CHILD_THEME_DIR . '/lib/skin-install.php';
 
+// Load Theme Widget content and installer.
+// Uses genesis_onboarding_after_import_content to clean up and save everything when a new skin is chosen.
+require_once CHILD_THEME_DIR . '/lib/widget-install.php';
+
 // Import custom separator control.
 require_once CHILD_THEME_DIR . '/lib/class-separator-control.php';
 
