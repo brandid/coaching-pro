@@ -74,65 +74,65 @@ msgctxt "Block pattern category"
 msgid "Coaching Pro"
 msgstr ""
 
-#: lib/block-patterns.php:46
+#: lib/block-patterns.php:66
 msgid "Main Hero"
 msgstr ""
 
-#: lib/block-patterns.php:47
+#: lib/block-patterns.php:67
 msgctxt "Block pattern description"
 msgid "A full-width hero image section with heading, supporting text, and a button."
 msgstr ""
 
-#: lib/block-patterns.php:63
+#: lib/block-patterns.php:109
 msgid "Hero 2-columns"
 msgstr ""
 
-#: lib/block-patterns.php:64
+#: lib/block-patterns.php:110
 msgctxt "Block pattern description"
 msgid "A full-width section with two columns: one column containing a hero image, the other column containing heading text, supporting text, and a button."
 msgstr ""
 
-#: lib/block-patterns.php:80
+#: lib/block-patterns.php:162
 msgid "Basic 2-columns"
 msgstr ""
 
-#: lib/block-patterns.php:81
+#: lib/block-patterns.php:163
 msgctxt "Block pattern description"
 msgid "A simple full-width section with two columns, each containing heading text, supporting text, and a button."
 msgstr ""
 
-#: lib/block-patterns.php:97
+#: lib/block-patterns.php:179
 msgid "Features 3-columns"
 msgstr ""
 
-#: lib/block-patterns.php:98
+#: lib/block-patterns.php:180
 msgctxt "Block pattern description"
 msgid "A full-width section with heading text, supporting text, and 3-columns."
 msgstr ""
 
-#: lib/block-patterns.php:114
+#: lib/block-patterns.php:196
 msgid "Blog Grid"
 msgstr ""
 
-#: lib/block-patterns.php:115
+#: lib/block-patterns.php:197
 msgctxt "Block pattern description"
 msgid "A full-width section to showcase blog posts. Contains heading text, sub-heading text, supporting text, and a 2-column grid of your latest blog posts."
 msgstr ""
 
-#: lib/block-patterns.php:131
+#: lib/block-patterns.php:213
 msgid "Testimonials Section"
 msgstr ""
 
-#: lib/block-patterns.php:132
+#: lib/block-patterns.php:214
 msgctxt "Block pattern description"
 msgid "A full-width section to showcase testimonials. Contains heading text, sub-heading text, supporting text, and a rotating slider of your testimonials."
 msgstr ""
 
-#: lib/block-patterns.php:148
+#: lib/block-patterns.php:230
 msgid "Newsletter Opt-In"
 msgstr ""
 
-#: lib/block-patterns.php:149
+#: lib/block-patterns.php:231
 msgctxt "Block pattern description"
 msgid "A full-width section to promote newsletter signups or other content. Contains a background hero image, heading text, sub-heading text, supporting text, and a place to add your own opt-in form block."
 msgstr ""
