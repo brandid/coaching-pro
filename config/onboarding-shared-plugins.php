@@ -25,27 +25,27 @@
 $coaching_pro_plugin_deps = array(
 		
 	array(
-		'name'       => __( 'Easy Digital Downloads', 'coursemaker' ),
+		'name'       => __( 'Easy Digital Downloads', 'coaching-pro' ),
 		'slug'       => 'easy-digital-downloads/easy-digital-downloads.php',
 		'public_url' => 'https://wordpress.org/plugins/easy-digital-downloads/',
 	),
 	array(
-		'name'       => __( 'Genesis Blocks', 'coursemaker' ),
+		'name'       => __( 'Genesis Blocks', 'coaching-pro' ),
 		'slug'       => 'genesis-blocks/genesis-blocks.php',
 		'public_url' => 'https://wordpress.org/plugins/genesis-blocks/',
 	),
 	array(
-		'name'       => __( 'Social Proof (Testimonials) Slider', 'coursemaker' ),
+		'name'       => __( 'Social Proof (Testimonials) Slider', 'coaching-pro' ),
 		'slug'       => 'social-proof-testimonials-slider/social-proof-slider.php',
 		'public_url' => 'https://wordpress.org/plugins/social-proof-testimonials-slider/',
 	),
 	array(
-		'name'       => __( 'WooCommerce', 'coursemaker' ),
+		'name'       => __( 'WooCommerce', 'coaching-pro' ),
 		'slug'       => 'woocommerce/woocommerce.php',
 		'public_url' => 'https://wordpress.org/plugins/woocommerce/',
 	),
 	array(
-		'name'       => __( 'WP Forms Lite', 'coursemaker' ),
+		'name'       => __( 'Contact Form by WPForms – Drag & Drop Form Builder', 'coaching-pro' ),
 		'slug'       => 'wpforms-lite/wpforms.php',
 		'public_url' => 'https://wordpress.org/plugins/wpforms-lite/',
 	),
